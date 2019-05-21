@@ -1,0 +1,2053 @@
+  
+ Reading input control file: ssprings.inp                                                                                        
+ --------------------------------------------------
+ Input event file format, name  : 
+           1 , IN/evlist.txt
+ Input station file format, name: 
+           1 , IN/stlist.txt
+ Xcor data file format, name    :  
+           1 , IN/xcordata.txt
+ tdif sign convention:           12
+ Name of input velocity model file: 
+ IN/vzmodel.txt
+ Name of output travel-time tables: 
+ TT/tt.pg ,  TT/tt.sg
+ Assumed Vp/Vs if Vs not specified in input file: 
+  1.7320
+ Min ray params (p-P, p-S) at long range (.133 = no Pn, .238 = no Sn):
+  0.1330   0.2380
+ Travel-time table depths (km):  min, max, space
+   0.000  26.000   1.000
+ TT table distances (del):       min, max, space
+   0.000 200.000   2.000
+ rmin, delmax, rmsmax
+ 0.600   80.000 0.200
+ rpsavgmin, rmincut, ngoodmin, iponly
+     0.000     0.000       0       0
+ nboot, nbranch_min
+     10      1
+ Output catalog file: OUT/out.growclust_cat
+ Input control file read.
+ Checking input parameters...
+ Input parameters ok!
+ Checking grow_params.mod parameters...
+ grow_params.mod parameters ok!
+ --------------------------------------------------
+  
+  
+ Reading event list...
+ First 10 events follow: 
+             956586 2012 10 13  5 53  3.920     0.01    39.66333 -119.68800   7.500
+                  1
+             956587 2012 10 13  6 11 17.650     0.64    39.66450 -119.68717   9.090
+                  2
+             956598 2012 10 13  7  5 33.519    -0.21    39.66310 -119.68860  11.640
+                  3
+             956602 2012 10 13  7 19 39.910     0.61    39.66267 -119.69033  11.670
+                  4
+             956611 2012 10 13  7 40 21.066     0.67    39.66400 -119.68620  11.760
+                  5
+             956612 2012 10 13  7 40 31.310     0.25    39.66150 -119.68800   8.500
+                  6
+             956616 2012 10 13  8 28 18.603     0.02    39.66300 -119.68690  12.810
+                  7
+             956621 2012 10 13  8 44 13.160    -0.13    39.65983 -119.68650   7.530
+                  8
+             956623 2012 10 13  8 46 47.526    -1.00    39.66170 -119.68940  10.620
+                  9
+             956626 2012 10 13 13  5 11.990     0.63    39.66783 -119.69017   5.110
+                 10
+  
+ Reading station list...
+ Station locations read.  Nsta =           51
+    1 BAB      39.6024 -120.1059    0.0000
+    2 BEK      39.8666 -120.3596    0.0000
+    3 BFC      38.8938 -119.6094    0.0000
+    4 BMHS     39.4231 -119.7648    0.0000
+    5 BMR      40.1086 -120.2920    0.0000
+    6 CCAD     39.1641 -119.7796    0.0000
+    7 CF01     39.1595 -119.7637    0.0000
+    8 CF02     39.1906 -119.7418    0.0000
+    9 CTC      39.2077 -120.1260    0.0000
+   10 DON      39.3517 -120.3205    0.0000
+   11 EGLV     39.1579 -119.7206    0.0000
+   12 EMB      38.9744 -120.1029    0.0000
+   13 EUR      39.7541 -120.7119    0.0000
+   14 GNO      38.9291 -119.8538    0.0000
+   15 GZY      39.9619 -120.6513    0.0000
+   16 HVGC     39.4896 -119.7212    0.0000
+   17 IND      39.4342 -120.2927    0.0000
+   18 KBF      39.5067 -120.2139    0.0000
+   19 LOY      39.6586 -120.2368    0.0000
+   20 MPK      39.2928 -120.0364    0.0000
+   21 NMHS     39.5308 -119.7764    0.0000
+   22 NOAA     39.5681 -119.7958    0.0000
+   23 PAH      39.7106 -119.3854    0.0000
+   24 PEA      39.6075 -119.9613    0.0000
+   25 PNT      39.0891 -119.5997    0.0000
+   26 PYM2     40.1701 -119.7321    0.0000
+   27 PYM3     40.0715 -119.4850    0.0000
+   28 REDF     39.3900 -119.7647    0.0000
+   29 RF05     39.5089 -119.8366    0.0000
+   30 RFNV     39.5740 -119.8277    0.0000
+   31 RUB      39.0517 -120.1549    0.0000
+   32 SAT      39.6024 -120.4480    0.0000
+   33 SBT      39.6267 -120.6669    0.0000
+   34 SKYF     39.4825 -119.8340    0.0000
+   35 SLID     39.3143 -119.8839    0.0000
+   36 SMI      39.8672 -120.5306    0.0000
+   37 SMRN     39.5370 -119.7283    0.0000
+   38 SPHI     39.5435 -119.7583    0.0000
+   39 SRV2     39.6533 -120.3432    0.0000
+   40 SRV3     39.6505 -120.4415    0.0000
+   41 SRV4     39.8643 -119.9616    0.0000
+   42 SRVL     39.5709 -120.3306    0.0000
+   43 SWTP     39.5162 -119.7044    0.0000
+   44 TAH      39.1515 -120.1630    0.0000
+   45 TNK      39.2674 -120.2368    0.0000
+   46 UNRN     39.5269 -119.8186    0.0000
+   47 VCN      39.2956 -119.6503    0.0000
+   48 VPK      39.4722 -120.0398    0.0000
+   49 WDEM     39.5841 -119.8099    0.0000
+   50 WVA      39.9444 -119.8250    0.0000
+   51 YER      38.9852 -119.2406    0.0000
+ ==================================================
+ Station lookup keys
+           1 BAB            66 <-->B
+           6 CCAD           67 <-->C
+          10 DON            68 <-->D
+          11 EGLV           69 <-->E
+          14 GNO            71 <-->G
+          16 HVGC           72 <-->H
+          17 IND            73 <-->I
+          18 KBF            75 <-->K
+          19 LOY            76 <-->L
+          20 MPK            77 <-->M
+          21 NMHS           78 <-->N
+          23 PAH            80 <-->P
+          28 REDF           82 <-->R
+          32 SAT            83 <-->S
+          44 TAH            84 <-->T
+          46 UNRN           85 <-->U
+          47 VCN            86 <-->V
+          49 WDEM           87 <-->W
+          51 YER            89 <-->Y
+  
+ Reading xcor-data text file: IN/xcordata.txt                                                                                     
+ Finished reading pair        10000
+     1043030     1187302
+ Finished reading pair        20000
+     1046603     1078032
+ Finished reading pair        30000
+     1064708     1126378
+ Finished reading pair        40000
+     1110374     1133361
+ Finished reading pair        50000
+     1109982     1111006
+ Finished processing xcor text file: IN/xcordata.txt                                                                                     
+ npair, nk =        50214      608577
+ npair_cut, nk_cut =            0           0
+ First two pairs follow:
+       1    956586   <---->        8    956621
+PEA    1   0.056   0.930     24.226
+PAH    1   0.059   0.930     26.398
+WVA    1   0.065   0.690     33.578
+SRVL   1   0.059   0.860     56.022
+SRV2   1   0.056   0.710     56.161
+PEA    2   0.052   0.920     24.226
+PAH    2   0.056   0.930     26.398
+WVA    2   0.056   0.990     33.578
+       1    956586   <---->       11    956790
+PEA    1   0.135   0.900     24.204
+PAH    1   0.156   0.930     26.429
+WVA    1   0.123   0.650     33.407
+SRVL   1   0.124   0.910     55.987
+SRV2   1   0.120   0.770     56.099
+PEA    2   0.146   0.870     24.204
+PAH    2   0.176   0.860     26.429
+WVA    2   0.116   0.970     33.407
+ elapsed seconds =   1.13654196    
+ Making travel-time tables...
+ Interpolating velocity model: IN/vzmodel.txt->TT/vzfine.txt
+  
+ Creating P-phase table: TT/tt.pg
+ finished reading model
+ Depth points in model=           60
+ ************************* Table of Model Interfaces **********************
+  Depth  Top Velocities  Bot Velocities    -----Flat Earth  Slownesses-----
+              vp1  vs1        vp2  vs2       p1      p2        s1      s2
+   1.0    1  3.00 1.73    2  3.00 1.73   0.33333 0.33328   0.57733 0.57724
+   1.0    2  3.00 1.73    3  4.50 2.60   0.33328 0.22219   0.57724 0.38482
+   2.0    4  4.50 2.60    5  5.50 3.18   0.22215 0.18176   0.38476 0.31481
+   4.0    7  5.50 3.18    8  6.00 3.46   0.18170 0.16656   0.31471 0.28849
+   7.0   11  6.00 3.46   12  6.10 3.52   0.16648 0.16375   0.28835 0.28363
+  12.0   17  6.10 3.52   18  6.20 3.58   0.16363 0.16099   0.28340 0.27883
+  18.0   24  6.20 3.58   25  6.40 3.70   0.16083 0.15581   0.27856 0.26986
+  28.0   35  6.40 3.70   36  6.80 3.93   0.15556 0.14641   0.26943 0.25359
+  38.0   46  6.80 3.93   47  7.80 4.50   0.14618 0.12744   0.25319 0.22073
+  50.0   59  8.00 4.62   60  8.00 4.62   0.12402 0.12402   0.21480 0.21480
+ pmin, pmax =    0.00000000      0.333333343    
+ Number of rays to compute:
+        5000
+ Output file name for travel-time table:
+ TT/tt.pg                                                                                            
+  
+ Creating S-phase table: TT/tt.sg
+ finished reading model
+ Depth points in model=           60
+ ************************* Table of Model Interfaces **********************
+  Depth  Top Velocities  Bot Velocities    -----Flat Earth  Slownesses-----
+              vp1  vs1        vp2  vs2       p1      p2        s1      s2
+   1.0    1  3.00 1.73    2  3.00 1.73   0.33333 0.33328   0.57733 0.57724
+   1.0    2  3.00 1.73    3  4.50 2.60   0.33328 0.22219   0.57724 0.38482
+   2.0    4  4.50 2.60    5  5.50 3.18   0.22215 0.18176   0.38476 0.31481
+   4.0    7  5.50 3.18    8  6.00 3.46   0.18170 0.16656   0.31471 0.28849
+   7.0   11  6.00 3.46   12  6.10 3.52   0.16648 0.16375   0.28835 0.28363
+  12.0   17  6.10 3.52   18  6.20 3.58   0.16363 0.16099   0.28340 0.27883
+  18.0   24  6.20 3.58   25  6.40 3.70   0.16083 0.15581   0.27856 0.26986
+  28.0   35  6.40 3.70   36  6.80 3.93   0.15556 0.14641   0.26943 0.25359
+  38.0   46  6.80 3.93   47  7.80 4.50   0.14618 0.12744   0.25319 0.22073
+  50.0   59  8.00 4.62   60  8.00 4.62   0.12402 0.12402   0.21480 0.21480
+ pmin, pmax =    0.00000000      0.577333868    
+ Number of rays to compute:
+        5000
+ Output file name for travel-time table:
+ TT/tt.sg                                                                                            
+     min, max event depth:    1.37   17.02
+     min, max table depth:    0.00   26.10
+   min, max vzmodel depth:    0.00   50.00
+ --------------------------------------------------
+  
+  
+ Maximum quake number =         1616
+ best pair follows
+      608578         472         996   49.1099968    
+       SMRN   39.537 -119.728  1 -0.025  0.95
+       SPHI   39.544 -119.758  1 -0.026  0.88
+       SWTP   39.516 -119.704  1 -0.026  0.98
+       NMHS   39.531 -119.776  1 -0.025  0.76
+       HVGC   39.490 -119.721  1 -0.025  0.99
+       PEA    39.608 -119.961  1 -0.025  1.00
+       PAH    39.711 -119.385  1 -0.014  0.99
+       REDF   39.390 -119.765  1 -0.027  0.99
+       WVA    39.944 -119.825  1 -0.020  0.99
+       VPK    39.472 -120.040  1 -0.031  0.99
+       VCN    39.296 -119.650  1 -0.027  0.99
+       LOY    39.659 -120.237  1 -0.029  0.99
+       PYM3   40.072 -119.485  1 -0.006  0.99
+       KBF    39.507 -120.214  1 -0.030  0.95
+       MPK    39.293 -120.036  1 -0.031  0.89
+       PYM2   40.170 -119.732  1 -0.019  0.99
+       IND    39.434 -120.293  1 -0.020  0.99
+       BEK    39.867 -120.360  1 -0.028  0.99
+       DON    39.352 -120.320  1 -0.030  0.98
+       PNT    39.089 -119.600  1 -0.018  1.00
+       SAT    39.602 -120.448  1 -0.030  0.96
+       TAH    39.151 -120.163  1 -0.028  0.86
+       BMR    40.109 -120.292  1 -0.024  0.98
+       SMI    39.867 -120.531  1 -0.017  0.98
+       RUB    39.052 -120.155  1 -0.032  0.77
+       GNO    38.929 -119.854  1  0.069  0.62
+       SBT    39.627 -120.667  1 -0.032  0.93
+       EMB    38.974 -120.103  1 -0.032  0.96
+       YER    38.985 -119.241  1 -0.029  0.99
+       BFC    38.894 -119.609  1 -0.029  0.99
+       GZY    39.962 -120.651  1 -0.028  0.98
+       SMRN   39.537 -119.728  2 -0.024  0.98
+       SPHI   39.544 -119.758  2 -0.028  0.99
+       SWTP   39.516 -119.704  2 -0.027  0.97
+       NMHS   39.531 -119.776  2 -0.020  0.96
+       UNRN   39.527 -119.819  2 -0.032  0.99
+       HVGC   39.490 -119.721  2 -0.029  0.98
+       PEA    39.608 -119.961  2 -0.030  0.98
+       PAH    39.711 -119.385  2 -0.008  0.97
+       REDF   39.390 -119.765  2 -0.033  0.98
+       WVA    39.944 -119.825  2 -0.015  0.99
+       VPK    39.472 -120.040  2 -0.036  0.96
+       VCN    39.296 -119.650  2 -0.029  0.98
+       LOY    39.659 -120.237  2 -0.032  0.96
+       PYM3   40.072 -119.485  2 -0.009  0.97
+       KBF    39.507 -120.214  2 -0.035  0.97
+       MPK    39.293 -120.036  2 -0.029  0.98
+       PYM2   40.170 -119.732  2 -0.015  0.94
+       IND    39.434 -120.293  2 -0.038  0.96
+       BEK    39.867 -120.360  2 -0.029  0.97
+       DON    39.352 -120.320  2 -0.029  0.98
+       PNT    39.089 -119.600  2 -0.018  0.99
+       SAT    39.602 -120.448  2 -0.023  0.95
+       TAH    39.151 -120.163  2 -0.038  0.97
+       BMR    40.109 -120.292  2 -0.012  0.98
+       SMI    39.867 -120.531  2 -0.030  0.95
+       RUB    39.052 -120.155  2 -0.028  0.98
+       SBT    39.627 -120.667  2 -0.036  0.95
+       EMB    38.974 -120.103  2 -0.040  0.98
+       YER    38.985 -119.241  2 -0.019  0.99
+       BFC    38.894 -119.609  2 -0.028  0.96
+       GZY    39.962 -120.651  2 -0.031  0.97
+ elapsed seconds =   7.98610449E-02
+ quake numbers for best pair =          472         996
+ cuspids for best pair =      1049940     1123640
+ cuspids from evlist =      1049940     1123640
+ evlist loc =    39.667169999999999       -119.68917000000000        10.8599997    
+ evlist loc =    39.666170000000001       -119.68933000000000        10.8900003    
+ mean loc =    39.666669999999996       -119.68925000000000        10.8750000    
+ reading phase file name: TT/tt.pg                                
+ reading phase file name: TT/tt.sg                                
+ DIFLOC results: 
+ quake 1 loc =    39.666825103152831       -119.68904224991786        10.8522434    
+ quake 2 loc =    39.666514896847161       -119.68945775008214        10.8977566    
+ torgdif, rms, rmed, resol =   -2.32551601E-02   1.33594461E-02   1.19350199E-03   5.50983567E-03
+ --------------------------------------------------
+  
+  
+ Starting GROWCLUST algorithm
+ elapsed seconds =   3.72803211E-03
+ (sorted) pair # / total # of pairs =            0.995738268    
+ (sorted) pair #, event i, event j, rfactor_ij=        50000        1427        1456   27.2599983    
+ ntree, nbranch_i, nbranch_j =         1571          12          12
+ (sorted) pair # / total # of pairs =            0.975823462    
+ (sorted) pair #, event i, event j, rfactor_ij=        49000         278         685   18.6899986    
+ ntree, nbranch_i, nbranch_j =         1479         136         136
+ (sorted) pair # / total # of pairs =            0.955908716    
+ (sorted) pair #, event i, event j, rfactor_ij=        48000          44        1457   16.2299995    
+ ntree, nbranch_i, nbranch_j =         1430         185         185
+ (sorted) pair # / total # of pairs =            0.935993969    
+ (sorted) pair #, event i, event j, rfactor_ij=        47000         335         718   14.8299990    
+ ntree, nbranch_i, nbranch_j =         1401         210         210
+ (sorted) pair # / total # of pairs =            0.916079164    
+ (sorted) pair #, event i, event j, rfactor_ij=        46000          47         696   13.8599997    
+ ntree, nbranch_i, nbranch_j =         1375         235         235
+ (sorted) pair # / total # of pairs =            0.896164417    
+ (sorted) pair #, event i, event j, rfactor_ij=        45000         214         907   13.0799999    
+ ntree, nbranch_i, nbranch_j =         1352         255         255
+ (sorted) pair # / total # of pairs =            0.876249671    
+ (sorted) pair #, event i, event j, rfactor_ij=        44000         817         828   12.4800005    
+ ntree, nbranch_i, nbranch_j =         1327           1         284
+ (sorted) pair # / total # of pairs =            0.856334865    
+ (sorted) pair #, event i, event j, rfactor_ij=        43000         276        1223   12.0000000    
+ ntree, nbranch_i, nbranch_j =         1302         308         308
+ (sorted) pair # / total # of pairs =            0.836420119    
+ (sorted) pair #, event i, event j, rfactor_ij=        42000         882        1607   11.5799999    
+ ntree, nbranch_i, nbranch_j =         1283         326         326
+ (sorted) pair # / total # of pairs =            0.816505373    
+ (sorted) pair #, event i, event j, rfactor_ij=        41000         172         781   11.2299995    
+ ntree, nbranch_i, nbranch_j =         1266         343         343
+ (sorted) pair # / total # of pairs =            0.796590567    
+ (sorted) pair #, event i, event j, rfactor_ij=        40000         276        1466   10.8999996    
+ ntree, nbranch_i, nbranch_j =         1256         353         353
+ (sorted) pair # / total # of pairs =            0.776675820    
+ (sorted) pair #, event i, event j, rfactor_ij=        39000         401         974   10.6099997    
+ ntree, nbranch_i, nbranch_j =         1239         373         373
+ (sorted) pair # / total # of pairs =            0.756761074    
+ (sorted) pair #, event i, event j, rfactor_ij=        38000          42        1075   10.3399992    
+ ntree, nbranch_i, nbranch_j =         1227         385         385
+ (sorted) pair # / total # of pairs =            0.736846268    
+ (sorted) pair #, event i, event j, rfactor_ij=        37000         295        1181   10.0900002    
+ ntree, nbranch_i, nbranch_j =         1209         402         402
+ (sorted) pair # / total # of pairs =            0.716931522    
+ (sorted) pair #, event i, event j, rfactor_ij=        36000         908        1005   9.86000061    
+ ntree, nbranch_i, nbranch_j =         1195         416         416
+ (sorted) pair # / total # of pairs =            0.697016776    
+ (sorted) pair #, event i, event j, rfactor_ij=        35000          79        1018   9.67999935    
+ ntree, nbranch_i, nbranch_j =         1176         433         433
+ (sorted) pair # / total # of pairs =            0.677102029    
+ (sorted) pair #, event i, event j, rfactor_ij=        34000         529        1188   9.49999905    
+ ntree, nbranch_i, nbranch_j =         1169         440         440
+ (sorted) pair # / total # of pairs =            0.657187223    
+ (sorted) pair #, event i, event j, rfactor_ij=        33000         102        1004   9.31000042    
+ ntree, nbranch_i, nbranch_j =         1156         453         453
+ (sorted) pair # / total # of pairs =            0.637272477    
+ (sorted) pair #, event i, event j, rfactor_ij=        32000        1223        1615   9.15999985    
+ ntree, nbranch_i, nbranch_j =         1142         466         466
+ (sorted) pair # / total # of pairs =            0.617357731    
+ (sorted) pair #, event i, event j, rfactor_ij=        31000          43        1022   9.00999928    
+ ntree, nbranch_i, nbranch_j =         1130         478         478
+ (sorted) pair # / total # of pairs =            0.597442925    
+ (sorted) pair #, event i, event j, rfactor_ij=        30000         120         658   8.86000061    
+ ntree, nbranch_i, nbranch_j =         1114         496         496
+ (sorted) pair # / total # of pairs =            0.577528179    
+ (sorted) pair #, event i, event j, rfactor_ij=        29000        1244        1315   8.73999977    
+ ntree, nbranch_i, nbranch_j =         1096         513         513
+ (sorted) pair # / total # of pairs =            0.557613432    
+ (sorted) pair #, event i, event j, rfactor_ij=        28000         245        1495   8.61000061    
+ ntree, nbranch_i, nbranch_j =         1088         521         521
+ (sorted) pair # / total # of pairs =            0.537698627    
+ (sorted) pair #, event i, event j, rfactor_ij=        27000         391         858   8.48999977    
+ ntree, nbranch_i, nbranch_j =         1077         536         536
+ (sorted) pair # / total # of pairs =            0.517783880    
+ (sorted) pair #, event i, event j, rfactor_ij=        26000         135         844   8.37000084    
+ ntree, nbranch_i, nbranch_j =         1071         542         542
+ (sorted) pair # / total # of pairs =            0.497869134    
+ (sorted) pair #, event i, event j, rfactor_ij=        25000         161        1137   8.26000023    
+ ntree, nbranch_i, nbranch_j =         1066         547         547
+ (sorted) pair # / total # of pairs =            0.477954358    
+ (sorted) pair #, event i, event j, rfactor_ij=        24000        1060        1185   8.15999985    
+ ntree, nbranch_i, nbranch_j =         1054         558         558
+ (sorted) pair # / total # of pairs =            0.458039582    
+ (sorted) pair #, event i, event j, rfactor_ij=        23000         942        1131   8.06000042    
+ ntree, nbranch_i, nbranch_j =         1048         564         564
+ (sorted) pair # / total # of pairs =            0.438124835    
+ (sorted) pair #, event i, event j, rfactor_ij=        22000        1434        1458   7.96999931    
+ ntree, nbranch_i, nbranch_j =         1041         571         571
+ (sorted) pair # / total # of pairs =            0.418210059    
+ (sorted) pair #, event i, event j, rfactor_ij=        21000         740         954   7.87000084    
+ ntree, nbranch_i, nbranch_j =         1035         576         576
+ (sorted) pair # / total # of pairs =            0.398295283    
+ (sorted) pair #, event i, event j, rfactor_ij=        20000        1164        1374   7.78000069    
+ ntree, nbranch_i, nbranch_j =         1021         588         588
+ (sorted) pair # / total # of pairs =            0.378380537    
+ (sorted) pair #, event i, event j, rfactor_ij=        19000         414        1165   7.69999933    
+ ntree, nbranch_i, nbranch_j =         1016         593         593
+ (sorted) pair # / total # of pairs =            0.358465761    
+ (sorted) pair #, event i, event j, rfactor_ij=        18000         795        1571   7.60999966    
+ ntree, nbranch_i, nbranch_j =         1006         603         603
+ (sorted) pair # / total # of pairs =            0.338551015    
+ (sorted) pair #, event i, event j, rfactor_ij=        17000        1119        1382   7.51999998    
+ ntree, nbranch_i, nbranch_j =          995         615         615
+ (sorted) pair # / total # of pairs =            0.318636239    
+ (sorted) pair #, event i, event j, rfactor_ij=        16000        1431        1457   7.43000031    
+ ntree, nbranch_i, nbranch_j =          986           1         624
+ (sorted) pair # / total # of pairs =            0.298721462    
+ (sorted) pair #, event i, event j, rfactor_ij=        15000          35         701   7.34999943    
+ ntree, nbranch_i, nbranch_j =          974         636         636
+ (sorted) pair # / total # of pairs =            0.278806716    
+ (sorted) pair #, event i, event j, rfactor_ij=        14000         813        1018   7.26999950    
+ ntree, nbranch_i, nbranch_j =          967         642         642
+ (sorted) pair # / total # of pairs =            0.258891940    
+ (sorted) pair #, event i, event j, rfactor_ij=        13000         280         749   7.18999958    
+ ntree, nbranch_i, nbranch_j =          958         650         650
+ (sorted) pair # / total # of pairs =            0.238977179    
+ (sorted) pair #, event i, event j, rfactor_ij=        12000         920        1456   7.11000013    
+ ntree, nbranch_i, nbranch_j =          955         653         653
+ (sorted) pair # / total # of pairs =            0.219062418    
+ (sorted) pair #, event i, event j, rfactor_ij=        11000         840        1075   7.03999996    
+ ntree, nbranch_i, nbranch_j =          950         658         658
+ (sorted) pair # / total # of pairs =            0.199147642    
+ (sorted) pair #, event i, event j, rfactor_ij=        10000        1076        1549   6.96999979    
+ ntree, nbranch_i, nbranch_j =          944         661         661
+ (sorted) pair # / total # of pairs =            0.179232880    
+ (sorted) pair #, event i, event j, rfactor_ij=         9000         288         991   6.89000034    
+ ntree, nbranch_i, nbranch_j =          937         668         668
+ (sorted) pair # / total # of pairs =            0.159318119    
+ (sorted) pair #, event i, event j, rfactor_ij=         8000         280        1157   6.81999922    
+ ntree, nbranch_i, nbranch_j =          927         677         677
+ (sorted) pair # / total # of pairs =            0.139403358    
+ (sorted) pair #, event i, event j, rfactor_ij=         7000         865        1444   6.73000002    
+ ntree, nbranch_i, nbranch_j =          918         685         685
+ (sorted) pair # / total # of pairs =            0.119488589    
+ (sorted) pair #, event i, event j, rfactor_ij=         6000         701         822   6.64000034    
+ ntree, nbranch_i, nbranch_j =          911         691         691
+ (sorted) pair # / total # of pairs =             9.95738208E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         5000         117         278   6.55000019    
+ ntree, nbranch_i, nbranch_j =          901         700         700
+ (sorted) pair # / total # of pairs =             7.96590596E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         4000        1369        1488   6.46000004    
+ ntree, nbranch_i, nbranch_j =          899         702         702
+ (sorted) pair # / total # of pairs =             5.97442947E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         3000         689        1137   6.36000013    
+ ntree, nbranch_i, nbranch_j =          897         704         704
+ (sorted) pair # / total # of pairs =             3.98295298E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         2000         236        1409   6.25000048    
+ ntree, nbranch_i, nbranch_j =          893         707         707
+ (sorted) pair # / total # of pairs =             1.99147649E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         1000         329        1466   6.11000013    
+ ntree, nbranch_i, nbranch_j =          892         708         708
+ GROWCLUST relocation complete for unresampled data
+ elapsed seconds =   15.4688072    
+  
+ Computing travel time residuals...
+ Done.
+ elapsed seconds =   3.85150909E-02
+ --------------------------------------------------
+  
+  
+ Maximum quake number =         1616
+ best pair follows (resampled data)
+      295120       23762         472         996   54.2500000    
+ (sorted) pair # / total # of pairs =            0.995738268    
+ (sorted) pair #, event i, event j, rfactor_ij=        50000         135         629   29.0200005    
+ ntree, nbranch_i, nbranch_j =         1545          56          56
+ (sorted) pair # / total # of pairs =            0.975823462    
+ (sorted) pair #, event i, event j, rfactor_ij=        49000         610        1164   20.3999996    
+ ntree, nbranch_i, nbranch_j =         1430         184         184
+ (sorted) pair # / total # of pairs =            0.955908716    
+ (sorted) pair #, event i, event j, rfactor_ij=        48000          82        1075   17.7800007    
+ ntree, nbranch_i, nbranch_j =         1356         256         256
+ (sorted) pair # / total # of pairs =            0.935993969    
+ (sorted) pair #, event i, event j, rfactor_ij=        47000         696         920   16.2899990    
+ ntree, nbranch_i, nbranch_j =         1297         316         316
+ (sorted) pair # / total # of pairs =            0.916079164    
+ (sorted) pair #, event i, event j, rfactor_ij=        46000         370         718   15.2199993    
+ ntree, nbranch_i, nbranch_j =         1243         368         368
+ (sorted) pair # / total # of pairs =            0.896164417    
+ (sorted) pair #, event i, event j, rfactor_ij=        45000         666         817   14.4199991    
+ ntree, nbranch_i, nbranch_j =         1203         409         409
+ (sorted) pair # / total # of pairs =            0.876249671    
+ (sorted) pair #, event i, event j, rfactor_ij=        44000         335        1221   13.8100004    
+ ntree, nbranch_i, nbranch_j =         1162         449         449
+ (sorted) pair # / total # of pairs =            0.856334865    
+ (sorted) pair #, event i, event j, rfactor_ij=        43000         291        1075   13.2599993    
+ ntree, nbranch_i, nbranch_j =         1128         485         485
+ (sorted) pair # / total # of pairs =            0.836420119    
+ (sorted) pair #, event i, event j, rfactor_ij=        42000        1472        1607   12.7700014    
+ ntree, nbranch_i, nbranch_j =         1110         504         504
+ (sorted) pair # / total # of pairs =            0.816505373    
+ (sorted) pair #, event i, event j, rfactor_ij=        41000          61          91   12.3300009    
+ ntree, nbranch_i, nbranch_j =         1097         517           1
+ (sorted) pair # / total # of pairs =            0.796590567    
+ (sorted) pair #, event i, event j, rfactor_ij=        40000         456         885   11.9699984    
+ ntree, nbranch_i, nbranch_j =         1079         535         535
+ (sorted) pair # / total # of pairs =            0.776675820    
+ (sorted) pair #, event i, event j, rfactor_ij=        39000          35          42   11.6299992    
+ ntree, nbranch_i, nbranch_j =         1065         548         548
+ (sorted) pair # / total # of pairs =            0.756761074    
+ (sorted) pair #, event i, event j, rfactor_ij=        38000        1112        1191   11.3099995    
+ ntree, nbranch_i, nbranch_j =         1047         565         565
+ (sorted) pair # / total # of pairs =            0.736846268    
+ (sorted) pair #, event i, event j, rfactor_ij=        37000         130         304   11.0200005    
+ ntree, nbranch_i, nbranch_j =         1033         580         580
+ (sorted) pair # / total # of pairs =            0.716931522    
+ (sorted) pair #, event i, event j, rfactor_ij=        36000         704        1016   10.7500010    
+ ntree, nbranch_i, nbranch_j =         1017         596         596
+ (sorted) pair # / total # of pairs =            0.697016776    
+ (sorted) pair #, event i, event j, rfactor_ij=        35000         835         918   10.4900007    
+ ntree, nbranch_i, nbranch_j =         1009         604         604
+ (sorted) pair # / total # of pairs =            0.677102029    
+ (sorted) pair #, event i, event j, rfactor_ij=        34000         133         751   10.2599993    
+ ntree, nbranch_i, nbranch_j =          997         616         616
+ (sorted) pair # / total # of pairs =            0.657187223    
+ (sorted) pair #, event i, event j, rfactor_ij=        33000        1471        1508   10.0400000    
+ ntree, nbranch_i, nbranch_j =          992           1         620
+ (sorted) pair # / total # of pairs =            0.637272477    
+ (sorted) pair #, event i, event j, rfactor_ij=        32000        1237        1330   9.82999992    
+ ntree, nbranch_i, nbranch_j =          979         634         634
+ (sorted) pair # / total # of pairs =            0.617357731    
+ (sorted) pair #, event i, event j, rfactor_ij=        31000         295         610   9.61999989    
+ ntree, nbranch_i, nbranch_j =          975         638         638
+ (sorted) pair # / total # of pairs =            0.597442925    
+ (sorted) pair #, event i, event j, rfactor_ij=        30000         781         852   9.41999912    
+ ntree, nbranch_i, nbranch_j =          970         643         643
+ (sorted) pair # / total # of pairs =            0.577528179    
+ (sorted) pair #, event i, event j, rfactor_ij=        29000         133         376   9.23000050    
+ ntree, nbranch_i, nbranch_j =          967         646         646
+ (sorted) pair # / total # of pairs =            0.557613432    
+ (sorted) pair #, event i, event j, rfactor_ij=        28000        1145        1222   9.03999996    
+ ntree, nbranch_i, nbranch_j =          961         651         651
+ (sorted) pair # / total # of pairs =            0.537698627    
+ (sorted) pair #, event i, event j, rfactor_ij=        27000         214        1119   8.86000061    
+ ntree, nbranch_i, nbranch_j =          958         654         654
+ (sorted) pair # / total # of pairs =            0.517783880    
+ (sorted) pair #, event i, event j, rfactor_ij=        26000        1261        1513   8.68999958    
+ ntree, nbranch_i, nbranch_j =          954         658         658
+ (sorted) pair # / total # of pairs =            0.497869134    
+ (sorted) pair #, event i, event j, rfactor_ij=        25000         234        1254   8.51999950    
+ ntree, nbranch_i, nbranch_j =          949         663         663
+ (sorted) pair # / total # of pairs =            0.477954358    
+ (sorted) pair #, event i, event j, rfactor_ij=        24000         716        1261   8.34999943    
+ ntree, nbranch_i, nbranch_j =          944         668         668
+ (sorted) pair # / total # of pairs =            0.458039582    
+ (sorted) pair #, event i, event j, rfactor_ij=        23000         150         495   8.18000031    
+ ntree, nbranch_i, nbranch_j =          940         672         672
+ (sorted) pair # / total # of pairs =            0.438124835    
+ (sorted) pair #, event i, event j, rfactor_ij=        22000         592        1362   8.02000046    
+ ntree, nbranch_i, nbranch_j =          936         675         675
+ (sorted) pair # / total # of pairs =            0.418210059    
+ (sorted) pair #, event i, event j, rfactor_ij=        21000         370         861   7.85999966    
+ ntree, nbranch_i, nbranch_j =          931         679         679
+ (sorted) pair # / total # of pairs =            0.398295283    
+ (sorted) pair #, event i, event j, rfactor_ij=        20000         396        1195   7.69999981    
+ ntree, nbranch_i, nbranch_j =          928         682         682
+ (sorted) pair # / total # of pairs =            0.378380537    
+ (sorted) pair #, event i, event j, rfactor_ij=        19000        1409        1472   7.52999973    
+ ntree, nbranch_i, nbranch_j =          923         685         685
+ (sorted) pair # / total # of pairs =            0.358465761    
+ (sorted) pair #, event i, event j, rfactor_ij=        18000         646        1371   7.35999966    
+ ntree, nbranch_i, nbranch_j =          921         687         687
+ (sorted) pair # / total # of pairs =            0.338551015    
+ (sorted) pair #, event i, event j, rfactor_ij=        17000          69         105   7.18000031    
+ ntree, nbranch_i, nbranch_j =          920         688         688
+ (sorted) pair # / total # of pairs =            0.318636239    
+ (sorted) pair #, event i, event j, rfactor_ij=        16000         333         369   7.01999950    
+ ntree, nbranch_i, nbranch_j =          918         692         692
+ (sorted) pair # / total # of pairs =            0.298721462    
+ (sorted) pair #, event i, event j, rfactor_ij=        15000         176        1195   6.84999990    
+ ntree, nbranch_i, nbranch_j =          914         696         696
+ (sorted) pair # / total # of pairs =            0.278806716    
+ (sorted) pair #, event i, event j, rfactor_ij=        14000          36          45   6.66999960    
+ ntree, nbranch_i, nbranch_j =          912         698         698
+ (sorted) pair # / total # of pairs =            0.258891940    
+ (sorted) pair #, event i, event j, rfactor_ij=        13000          86         631   6.49000025    
+ ntree, nbranch_i, nbranch_j =          909         701         701
+ (sorted) pair # / total # of pairs =            0.238977179    
+ (sorted) pair #, event i, event j, rfactor_ij=        12000          82         580   6.30999994    
+ ntree, nbranch_i, nbranch_j =          908         702         702
+ (sorted) pair # / total # of pairs =            0.219062418    
+ (sorted) pair #, event i, event j, rfactor_ij=        11000         216        1005   6.12000036    
+ ntree, nbranch_i, nbranch_j =          906         704         704
+ (sorted) pair # / total # of pairs =            0.199147642    
+ (sorted) pair #, event i, event j, rfactor_ij=        10000         471         835   5.92999935    
+ ntree, nbranch_i, nbranch_j =          906         704         704
+ (sorted) pair # / total # of pairs =            0.179232880    
+ (sorted) pair #, event i, event j, rfactor_ij=         9000        1185        1434   5.73000050    
+ ntree, nbranch_i, nbranch_j =          905         705         705
+ (sorted) pair # / total # of pairs =            0.159318119    
+ (sorted) pair #, event i, event j, rfactor_ij=         8000         139         795   5.51999998    
+ ntree, nbranch_i, nbranch_j =          903         706         706
+ (sorted) pair # / total # of pairs =            0.139403358    
+ (sorted) pair #, event i, event j, rfactor_ij=         7000         129        1170   5.29999971    
+ ntree, nbranch_i, nbranch_j =          902         707         707
+ (sorted) pair # / total # of pairs =            0.119488589    
+ (sorted) pair #, event i, event j, rfactor_ij=         6000         960        1368   5.05000019    
+ ntree, nbranch_i, nbranch_j =          898         711         711
+ (sorted) pair # / total # of pairs =             9.95738208E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         5000         960        1039   4.78999996    
+ ntree, nbranch_i, nbranch_j =          898         711         711
+ (sorted) pair # / total # of pairs =             7.96590596E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         4000         859        1107   4.50000000    
+ ntree, nbranch_i, nbranch_j =          896         712         712
+ (sorted) pair # / total # of pairs =             5.97442947E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         3000        1169        1257   4.09999990    
+ ntree, nbranch_i, nbranch_j =          894         714         714
+ (sorted) pair # / total # of pairs =             3.98295298E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         2000         629         906   3.68000007    
+ ntree, nbranch_i, nbranch_j =          893         715         715
+ (sorted) pair # / total # of pairs =             1.99147649E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         1000         117         263   3.08000016    
+ ntree, nbranch_i, nbranch_j =          889         719         719
+ Done.
+ End of bootstrap iteration:            1
+ elapsed seconds =   11.7669392    
+ --------------------------------------------------
+  
+  
+ Maximum quake number =         1616
+ best pair follows (resampled data)
+      295107       23762         472         996   69.5100098    
+ (sorted) pair # / total # of pairs =            0.995738268    
+ (sorted) pair #, event i, event j, rfactor_ij=        50000        1304        1427   29.2300034    
+ ntree, nbranch_i, nbranch_j =         1546          24          24
+ (sorted) pair # / total # of pairs =            0.975823462    
+ (sorted) pair #, event i, event j, rfactor_ij=        49000         128        1222   20.4799995    
+ ntree, nbranch_i, nbranch_j =         1424         189         189
+ (sorted) pair # / total # of pairs =            0.955908716    
+ (sorted) pair #, event i, event j, rfactor_ij=        48000          24        1008   17.8099995    
+ ntree, nbranch_i, nbranch_j =         1348         262         262
+ (sorted) pair # / total # of pairs =            0.935993969    
+ (sorted) pair #, event i, event j, rfactor_ij=        47000         610        1472   16.2500000    
+ ntree, nbranch_i, nbranch_j =         1289         324         324
+ (sorted) pair # / total # of pairs =            0.916079164    
+ (sorted) pair #, event i, event j, rfactor_ij=        46000          36         396   15.1999989    
+ ntree, nbranch_i, nbranch_j =         1240         370         370
+ (sorted) pair # / total # of pairs =            0.896164417    
+ (sorted) pair #, event i, event j, rfactor_ij=        45000         338         920   14.4099989    
+ ntree, nbranch_i, nbranch_j =         1199         416         416
+ (sorted) pair # / total # of pairs =            0.876249671    
+ (sorted) pair #, event i, event j, rfactor_ij=        44000        1062        1157   13.7500010    
+ ntree, nbranch_i, nbranch_j =         1163         451         451
+ (sorted) pair # / total # of pairs =            0.856334865    
+ (sorted) pair #, event i, event j, rfactor_ij=        43000         853        1549   13.1700001    
+ ntree, nbranch_i, nbranch_j =         1138         477         477
+ (sorted) pair # / total # of pairs =            0.836420119    
+ (sorted) pair #, event i, event j, rfactor_ij=        42000         766        1131   12.7000008    
+ ntree, nbranch_i, nbranch_j =         1117         500         500
+ (sorted) pair # / total # of pairs =            0.816505373    
+ (sorted) pair #, event i, event j, rfactor_ij=        41000         236        1002   12.2900000    
+ ntree, nbranch_i, nbranch_j =         1097         518         518
+ (sorted) pair # / total # of pairs =            0.796590567    
+ (sorted) pair #, event i, event j, rfactor_ij=        40000         818        1495   11.9499989    
+ ntree, nbranch_i, nbranch_j =         1073         541         541
+ (sorted) pair # / total # of pairs =            0.776675820    
+ (sorted) pair #, event i, event j, rfactor_ij=        39000         999        1065   11.6099997    
+ ntree, nbranch_i, nbranch_j =         1054         559         559
+ (sorted) pair # / total # of pairs =            0.756761074    
+ (sorted) pair #, event i, event j, rfactor_ij=        38000         129         844   11.3099995    
+ ntree, nbranch_i, nbranch_j =         1044         567         567
+ (sorted) pair # / total # of pairs =            0.736846268    
+ (sorted) pair #, event i, event j, rfactor_ij=        37000         525        1039   11.0399990    
+ ntree, nbranch_i, nbranch_j =         1026         585         585
+ (sorted) pair # / total # of pairs =            0.716931522    
+ (sorted) pair #, event i, event j, rfactor_ij=        36000         927        1435   10.7699995    
+ ntree, nbranch_i, nbranch_j =         1013         597         597
+ (sorted) pair # / total # of pairs =            0.697016776    
+ (sorted) pair #, event i, event j, rfactor_ij=        35000         131         777   10.5100012    
+ ntree, nbranch_i, nbranch_j =         1006         604         604
+ (sorted) pair # / total # of pairs =            0.677102029    
+ (sorted) pair #, event i, event j, rfactor_ij=        34000         592        1615   10.2900000    
+ ntree, nbranch_i, nbranch_j =          995         616         616
+ (sorted) pair # / total # of pairs =            0.657187223    
+ (sorted) pair #, event i, event j, rfactor_ij=        33000        1089        1222   10.0600004    
+ ntree, nbranch_i, nbranch_j =          989         622         622
+ (sorted) pair # / total # of pairs =            0.637272477    
+ (sorted) pair #, event i, event j, rfactor_ij=        32000          69          91   9.84000015    
+ ntree, nbranch_i, nbranch_j =          984         627         627
+ (sorted) pair # / total # of pairs =            0.617357731    
+ (sorted) pair #, event i, event j, rfactor_ij=        31000          44         102   9.63999939    
+ ntree, nbranch_i, nbranch_j =          979         630         630
+ (sorted) pair # / total # of pairs =            0.597442925    
+ (sorted) pair #, event i, event j, rfactor_ij=        30000         428         592   9.44999981    
+ ntree, nbranch_i, nbranch_j =          977         632         632
+ (sorted) pair # / total # of pairs =            0.577528179    
+ (sorted) pair #, event i, event j, rfactor_ij=        29000          43         120   9.26000023    
+ ntree, nbranch_i, nbranch_j =          974         635         635
+ (sorted) pair # / total # of pairs =            0.557613432    
+ (sorted) pair #, event i, event j, rfactor_ij=        28000         414        1533   9.06000042    
+ ntree, nbranch_i, nbranch_j =          971         638           1
+ (sorted) pair # / total # of pairs =            0.537698627    
+ (sorted) pair #, event i, event j, rfactor_ij=        27000         120         372   8.86999989    
+ ntree, nbranch_i, nbranch_j =          968         641         641
+ (sorted) pair # / total # of pairs =            0.517783880    
+ (sorted) pair #, event i, event j, rfactor_ij=        26000         304        1062   8.69000053    
+ ntree, nbranch_i, nbranch_j =          962         647         647
+ (sorted) pair # / total # of pairs =            0.497869134    
+ (sorted) pair #, event i, event j, rfactor_ij=        25000         408         456   8.51000023    
+ ntree, nbranch_i, nbranch_j =          958         650         650
+ (sorted) pair # / total # of pairs =            0.477954358    
+ (sorted) pair #, event i, event j, rfactor_ij=        24000         408         666   8.32999992    
+ ntree, nbranch_i, nbranch_j =          955         653         653
+ (sorted) pair # / total # of pairs =            0.458039582    
+ (sorted) pair #, event i, event j, rfactor_ij=        23000         612         853   8.17000008    
+ ntree, nbranch_i, nbranch_j =          952         655         655
+ (sorted) pair # / total # of pairs =            0.438124835    
+ (sorted) pair #, event i, event j, rfactor_ij=        22000        1098        1145   8.00000000    
+ ntree, nbranch_i, nbranch_j =          949           1         658
+ (sorted) pair # / total # of pairs =            0.418210059    
+ (sorted) pair #, event i, event j, rfactor_ij=        21000         635         779   7.83000040    
+ ntree, nbranch_i, nbranch_j =          943         662         662
+ (sorted) pair # / total # of pairs =            0.398295283    
+ (sorted) pair #, event i, event j, rfactor_ij=        20000         182         368   7.65000057    
+ ntree, nbranch_i, nbranch_j =          939         665         665
+ (sorted) pair # / total # of pairs =            0.378380537    
+ (sorted) pair #, event i, event j, rfactor_ij=        19000         646         865   7.48999977    
+ ntree, nbranch_i, nbranch_j =          938         666         666
+ (sorted) pair # / total # of pairs =            0.358465761    
+ (sorted) pair #, event i, event j, rfactor_ij=        18000         918        1018   7.32000065    
+ ntree, nbranch_i, nbranch_j =          932         672         672
+ (sorted) pair # / total # of pairs =            0.338551015    
+ (sorted) pair #, event i, event j, rfactor_ij=        17000         428         852   7.15999985    
+ ntree, nbranch_i, nbranch_j =          930         674         674
+ (sorted) pair # / total # of pairs =            0.318636239    
+ (sorted) pair #, event i, event j, rfactor_ij=        16000         693        1454   6.99000072    
+ ntree, nbranch_i, nbranch_j =          927         677         677
+ (sorted) pair # / total # of pairs =            0.298721462    
+ (sorted) pair #, event i, event j, rfactor_ij=        15000          97         128   6.82000065    
+ ntree, nbranch_i, nbranch_j =          925         679         679
+ (sorted) pair # / total # of pairs =            0.278806716    
+ (sorted) pair #, event i, event j, rfactor_ij=        14000         495         902   6.65000057    
+ ntree, nbranch_i, nbranch_j =          923         680         680
+ (sorted) pair # / total # of pairs =            0.258891940    
+ (sorted) pair #, event i, event j, rfactor_ij=        13000         393         496   6.48000050    
+ ntree, nbranch_i, nbranch_j =          923         680         680
+ (sorted) pair # / total # of pairs =            0.238977179    
+ (sorted) pair #, event i, event j, rfactor_ij=        12000          35         900   6.30000019    
+ ntree, nbranch_i, nbranch_j =          922         681         681
+ (sorted) pair # / total # of pairs =            0.219062418    
+ (sorted) pair #, event i, event j, rfactor_ij=        11000         456         748   6.11999989    
+ ntree, nbranch_i, nbranch_j =          920         683         683
+ (sorted) pair # / total # of pairs =            0.199147642    
+ (sorted) pair #, event i, event j, rfactor_ij=        10000          79         176   5.92999983    
+ ntree, nbranch_i, nbranch_j =          919         684         684
+ (sorted) pair # / total # of pairs =            0.179232880    
+ (sorted) pair #, event i, event j, rfactor_ij=         9000         569        1173   5.73000050    
+ ntree, nbranch_i, nbranch_j =          914         689         689
+ (sorted) pair # / total # of pairs =            0.159318119    
+ (sorted) pair #, event i, event j, rfactor_ij=         8000          69         667   5.53999996    
+ ntree, nbranch_i, nbranch_j =          912         690         690
+ (sorted) pair # / total # of pairs =            0.139403358    
+ (sorted) pair #, event i, event j, rfactor_ij=         7000         667         886   5.32000017    
+ ntree, nbranch_i, nbranch_j =          910         692         692
+ (sorted) pair # / total # of pairs =            0.119488589    
+ (sorted) pair #, event i, event j, rfactor_ij=         6000         646        1502   5.05999994    
+ ntree, nbranch_i, nbranch_j =          907         698         698
+ (sorted) pair # / total # of pairs =             9.95738208E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         5000         102         569   4.79000044    
+ ntree, nbranch_i, nbranch_j =          907         698         698
+ (sorted) pair # / total # of pairs =             7.96590596E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         4000        1308        1382   4.51000023    
+ ntree, nbranch_i, nbranch_j =          905         700         700
+ (sorted) pair # / total # of pairs =             5.97442947E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         3000         917        1179   4.15999985    
+ ntree, nbranch_i, nbranch_j =          898         707         707
+ (sorted) pair # / total # of pairs =             3.98295298E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         2000        1022        1117   3.76000023    
+ ntree, nbranch_i, nbranch_j =          895         711         711
+ (sorted) pair # / total # of pairs =             1.99147649E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         1000         329         882   3.13000011    
+ ntree, nbranch_i, nbranch_j =          895         711         711
+ Done.
+ End of bootstrap iteration:            2
+ elapsed seconds =   12.1821480    
+ --------------------------------------------------
+  
+  
+ Maximum quake number =         1616
+ best pair follows (resampled data)
+      294604       23762         472         996   65.1800003    
+ (sorted) pair # / total # of pairs =            0.995738268    
+ (sorted) pair #, event i, event j, rfactor_ij=        50000        1221        1454   28.6999989    
+ ntree, nbranch_i, nbranch_j =         1554          21          21
+ (sorted) pair # / total # of pairs =            0.975823462    
+ (sorted) pair #, event i, event j, rfactor_ij=        49000         495         882   20.5000019    
+ ntree, nbranch_i, nbranch_j =         1434         179           1
+ (sorted) pair # / total # of pairs =            0.955908716    
+ (sorted) pair #, event i, event j, rfactor_ij=        48000         779        1222   17.7600021    
+ ntree, nbranch_i, nbranch_j =         1356         256         256
+ (sorted) pair # / total # of pairs =            0.935993969    
+ (sorted) pair #, event i, event j, rfactor_ij=        47000         369        1185   16.2900009    
+ ntree, nbranch_i, nbranch_j =         1302         308         308
+ (sorted) pair # / total # of pairs =            0.916079164    
+ (sorted) pair #, event i, event j, rfactor_ij=        46000        1240        1331   15.1999998    
+ ntree, nbranch_i, nbranch_j =         1245         367         367
+ (sorted) pair # / total # of pairs =            0.896164417    
+ (sorted) pair #, event i, event j, rfactor_ij=        45000         637        1181   14.4000006    
+ ntree, nbranch_i, nbranch_j =         1201         409         409
+ (sorted) pair # / total # of pairs =            0.876249671    
+ (sorted) pair #, event i, event j, rfactor_ij=        44000         369        1444   13.7300024    
+ ntree, nbranch_i, nbranch_j =         1169         441         441
+ (sorted) pair # / total # of pairs =            0.856334865    
+ (sorted) pair #, event i, event j, rfactor_ij=        43000         742         793   13.2200012    
+ ntree, nbranch_i, nbranch_j =         1133         475         475
+ (sorted) pair # / total # of pairs =            0.836420119    
+ (sorted) pair #, event i, event j, rfactor_ij=        42000         265         781   12.7400007    
+ ntree, nbranch_i, nbranch_j =         1111         499         499
+ (sorted) pair # / total # of pairs =            0.816505373    
+ (sorted) pair #, event i, event j, rfactor_ij=        41000        1221        1386   12.3300018    
+ ntree, nbranch_i, nbranch_j =         1081         530         530
+ (sorted) pair # / total # of pairs =            0.796590567    
+ (sorted) pair #, event i, event j, rfactor_ij=        40000         600         613   11.9700003    
+ ntree, nbranch_i, nbranch_j =         1064         548         548
+ (sorted) pair # / total # of pairs =            0.776675820    
+ (sorted) pair #, event i, event j, rfactor_ij=        39000          46         117   11.6400003    
+ ntree, nbranch_i, nbranch_j =         1053           1         559
+ (sorted) pair # / total # of pairs =            0.756761074    
+ (sorted) pair #, event i, event j, rfactor_ij=        38000         780        1164   11.3400002    
+ ntree, nbranch_i, nbranch_j =         1042         574         574
+ (sorted) pair # / total # of pairs =            0.736846268    
+ (sorted) pair #, event i, event j, rfactor_ij=        37000         666        1002   11.0599995    
+ ntree, nbranch_i, nbranch_j =         1030         586         586
+ (sorted) pair # / total # of pairs =            0.716931522    
+ (sorted) pair #, event i, event j, rfactor_ij=        36000        1218        1222   10.7999992    
+ ntree, nbranch_i, nbranch_j =         1022         594         594
+ (sorted) pair # / total # of pairs =            0.697016776    
+ (sorted) pair #, event i, event j, rfactor_ij=        35000        1199        1457   10.5499992    
+ ntree, nbranch_i, nbranch_j =         1010         606         606
+ (sorted) pair # / total # of pairs =            0.677102029    
+ (sorted) pair #, event i, event j, rfactor_ij=        34000         295         840   10.3199997    
+ ntree, nbranch_i, nbranch_j =         1004         609         609
+ (sorted) pair # / total # of pairs =            0.657187223    
+ (sorted) pair #, event i, event j, rfactor_ij=        33000         135        1224   10.0799999    
+ ntree, nbranch_i, nbranch_j =          995         619         619
+ (sorted) pair # / total # of pairs =            0.637272477    
+ (sorted) pair #, event i, event j, rfactor_ij=        32000         288         969   9.85000038    
+ ntree, nbranch_i, nbranch_j =          991         624         624
+ (sorted) pair # / total # of pairs =            0.617357731    
+ (sorted) pair #, event i, event j, rfactor_ij=        31000        1171        1575   9.65999889    
+ ntree, nbranch_i, nbranch_j =          983         632         632
+ (sorted) pair # / total # of pairs =            0.597442925    
+ (sorted) pair #, event i, event j, rfactor_ij=        30000          79         325   9.45999908    
+ ntree, nbranch_i, nbranch_j =          979         635         635
+ (sorted) pair # / total # of pairs =            0.577528179    
+ (sorted) pair #, event i, event j, rfactor_ij=        29000         140        1361   9.27000046    
+ ntree, nbranch_i, nbranch_j =          973         641         641
+ (sorted) pair # / total # of pairs =            0.557613432    
+ (sorted) pair #, event i, event j, rfactor_ij=        28000         472        1423   9.07999992    
+ ntree, nbranch_i, nbranch_j =          969         644         644
+ (sorted) pair # / total # of pairs =            0.537698627    
+ (sorted) pair #, event i, event j, rfactor_ij=        27000         334        1181   8.89000034    
+ ntree, nbranch_i, nbranch_j =          966         647         647
+ (sorted) pair # / total # of pairs =            0.517783880    
+ (sorted) pair #, event i, event j, rfactor_ij=        26000         367         874   8.71000004    
+ ntree, nbranch_i, nbranch_j =          963         650         650
+ (sorted) pair # / total # of pairs =            0.497869134    
+ (sorted) pair #, event i, event j, rfactor_ij=        25000         306         592   8.53000069    
+ ntree, nbranch_i, nbranch_j =          963         650         650
+ (sorted) pair # / total # of pairs =            0.477954358    
+ (sorted) pair #, event i, event j, rfactor_ij=        24000         129        1434   8.36000061    
+ ntree, nbranch_i, nbranch_j =          958         655         655
+ (sorted) pair # / total # of pairs =            0.458039582    
+ (sorted) pair #, event i, event j, rfactor_ij=        23000         742        1331   8.19000053    
+ ntree, nbranch_i, nbranch_j =          954         658         658
+ (sorted) pair # / total # of pairs =            0.438124835    
+ (sorted) pair #, event i, event j, rfactor_ij=        22000        1022        1538   8.02999973    
+ ntree, nbranch_i, nbranch_j =          952         660         660
+ (sorted) pair # / total # of pairs =            0.418210059    
+ (sorted) pair #, event i, event j, rfactor_ij=        21000         130        1189   7.87000084    
+ ntree, nbranch_i, nbranch_j =          951         662         662
+ (sorted) pair # / total # of pairs =            0.398295283    
+ (sorted) pair #, event i, event j, rfactor_ij=        20000           8          47   7.69999981    
+ ntree, nbranch_i, nbranch_j =          951         662         662
+ (sorted) pair # / total # of pairs =            0.378380537    
+ (sorted) pair #, event i, event j, rfactor_ij=        19000         907        1188   7.53000069    
+ ntree, nbranch_i, nbranch_j =          948         664         664
+ (sorted) pair # / total # of pairs =            0.358465761    
+ (sorted) pair #, event i, event j, rfactor_ij=        18000         696        1064   7.36999989    
+ ntree, nbranch_i, nbranch_j =          938         674         674
+ (sorted) pair # / total # of pairs =            0.338551015    
+ (sorted) pair #, event i, event j, rfactor_ij=        17000         747        1369   7.19999981    
+ ntree, nbranch_i, nbranch_j =          936         676         676
+ (sorted) pair # / total # of pairs =            0.318636239    
+ (sorted) pair #, event i, event j, rfactor_ij=        16000         131        1118   7.02999973    
+ ntree, nbranch_i, nbranch_j =          933         679         679
+ (sorted) pair # / total # of pairs =            0.298721462    
+ (sorted) pair #, event i, event j, rfactor_ij=        15000         251         496   6.84999990    
+ ntree, nbranch_i, nbranch_j =          930         682         682
+ (sorted) pair # / total # of pairs =            0.278806716    
+ (sorted) pair #, event i, event j, rfactor_ij=        14000         858        1371   6.67999935    
+ ntree, nbranch_i, nbranch_j =          925         686         686
+ (sorted) pair # / total # of pairs =            0.258891940    
+ (sorted) pair #, event i, event j, rfactor_ij=        13000        1052        1157   6.49000025    
+ ntree, nbranch_i, nbranch_j =          923         687         687
+ (sorted) pair # / total # of pairs =            0.238977179    
+ (sorted) pair #, event i, event j, rfactor_ij=        12000         128         678   6.30999947    
+ ntree, nbranch_i, nbranch_j =          922         688         688
+ (sorted) pair # / total # of pairs =            0.219062418    
+ (sorted) pair #, event i, event j, rfactor_ij=        11000         499        1362   6.11000061    
+ ntree, nbranch_i, nbranch_j =          921         689         689
+ (sorted) pair # / total # of pairs =            0.199147642    
+ (sorted) pair #, event i, event j, rfactor_ij=        10000        1361        1409   5.92000008    
+ ntree, nbranch_i, nbranch_j =          918         692         692
+ (sorted) pair # / total # of pairs =            0.179232880    
+ (sorted) pair #, event i, event j, rfactor_ij=         9000         657        1224   5.72000027    
+ ntree, nbranch_i, nbranch_j =          915         695         695
+ (sorted) pair # / total # of pairs =            0.159318119    
+ (sorted) pair #, event i, event j, rfactor_ij=         8000        1179        1494   5.50999975    
+ ntree, nbranch_i, nbranch_j =          914         696         696
+ (sorted) pair # / total # of pairs =            0.139403358    
+ (sorted) pair #, event i, event j, rfactor_ij=         7000         854        1218   5.28999996    
+ ntree, nbranch_i, nbranch_j =          910         699         699
+ (sorted) pair # / total # of pairs =            0.119488589    
+ (sorted) pair #, event i, event j, rfactor_ij=         6000         844        1000   5.03999996    
+ ntree, nbranch_i, nbranch_j =          908         701         701
+ (sorted) pair # / total # of pairs =             9.95738208E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         5000         134         678   4.78999949    
+ ntree, nbranch_i, nbranch_j =          906         703         703
+ (sorted) pair # / total # of pairs =             7.96590596E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         4000         844        1052   4.50000000    
+ ntree, nbranch_i, nbranch_j =          904         705         705
+ (sorted) pair # / total # of pairs =             5.97442947E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         3000         132         635   4.12000036    
+ ntree, nbranch_i, nbranch_j =          903         706         706
+ (sorted) pair # / total # of pairs =             3.98295298E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         2000         237         716   3.70000005    
+ ntree, nbranch_i, nbranch_j =          903         706         706
+ (sorted) pair # / total # of pairs =             1.99147649E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         1000        1200        1435   3.05999994    
+ ntree, nbranch_i, nbranch_j =          898         710         710
+ Done.
+ End of bootstrap iteration:            3
+ elapsed seconds =   11.1460190    
+ --------------------------------------------------
+  
+  
+ Maximum quake number =         1616
+ best pair follows (resampled data)
+      119058        9393         161         495   53.1999969    
+ (sorted) pair # / total # of pairs =            0.995738268    
+ (sorted) pair #, event i, event j, rfactor_ij=        50000        1454        1472   28.9599991    
+ ntree, nbranch_i, nbranch_j =         1552          15          15
+ (sorted) pair # / total # of pairs =            0.975823462    
+ (sorted) pair #, event i, event j, rfactor_ij=        49000          44         338   20.3199978    
+ ntree, nbranch_i, nbranch_j =         1416         199         199
+ (sorted) pair # / total # of pairs =            0.955908716    
+ (sorted) pair #, event i, event j, rfactor_ij=        48000         368         369   17.7099991    
+ ntree, nbranch_i, nbranch_j =         1342         268         268
+ (sorted) pair # / total # of pairs =            0.935993969    
+ (sorted) pair #, event i, event j, rfactor_ij=        47000         338        1062   16.2300014    
+ ntree, nbranch_i, nbranch_j =         1284         325         325
+ (sorted) pair # / total # of pairs =            0.916079164    
+ (sorted) pair #, event i, event j, rfactor_ij=        46000         138        1148   15.1799984    
+ ntree, nbranch_i, nbranch_j =         1238         372         372
+ (sorted) pair # / total # of pairs =            0.896164417    
+ (sorted) pair #, event i, event j, rfactor_ij=        45000         495         991   14.4100018    
+ ntree, nbranch_i, nbranch_j =         1204         411         411
+ (sorted) pair # / total # of pairs =            0.876249671    
+ (sorted) pair #, event i, event j, rfactor_ij=        44000         716        1157   13.7299995    
+ ntree, nbranch_i, nbranch_j =         1166         446         446
+ (sorted) pair # / total # of pairs =            0.856334865    
+ (sorted) pair #, event i, event j, rfactor_ij=        43000         135        1178   13.1699991    
+ ntree, nbranch_i, nbranch_j =         1131         478         478
+ (sorted) pair # / total # of pairs =            0.836420119    
+ (sorted) pair #, event i, event j, rfactor_ij=        42000         335         410   12.7200012    
+ ntree, nbranch_i, nbranch_j =         1109         502         502
+ (sorted) pair # / total # of pairs =            0.816505373    
+ (sorted) pair #, event i, event j, rfactor_ij=        41000         666         844   12.3100004    
+ ntree, nbranch_i, nbranch_j =         1091         519         519
+ (sorted) pair # / total # of pairs =            0.796590567    
+ (sorted) pair #, event i, event j, rfactor_ij=        40000         285         335   11.9499998    
+ ntree, nbranch_i, nbranch_j =         1073         538         538
+ (sorted) pair # / total # of pairs =            0.776675820    
+ (sorted) pair #, event i, event j, rfactor_ij=        39000         885         886   11.6099997    
+ ntree, nbranch_i, nbranch_j =         1062         549         549
+ (sorted) pair # / total # of pairs =            0.756761074    
+ (sorted) pair #, event i, event j, rfactor_ij=        38000         370        1016   11.2999992    
+ ntree, nbranch_i, nbranch_j =         1045         566         566
+ (sorted) pair # / total # of pairs =            0.736846268    
+ (sorted) pair #, event i, event j, rfactor_ij=        37000         637         783   11.0200005    
+ ntree, nbranch_i, nbranch_j =         1032         578         578
+ (sorted) pair # / total # of pairs =            0.716931522    
+ (sorted) pair #, event i, event j, rfactor_ij=        36000         854         907   10.7699995    
+ ntree, nbranch_i, nbranch_j =         1025         584         584
+ (sorted) pair # / total # of pairs =            0.697016776    
+ (sorted) pair #, event i, event j, rfactor_ij=        35000        1382        1549   10.5200005    
+ ntree, nbranch_i, nbranch_j =         1016           4         593
+ (sorted) pair # / total # of pairs =            0.677102029    
+ (sorted) pair #, event i, event j, rfactor_ij=        34000          44        1585   10.2700005    
+ ntree, nbranch_i, nbranch_j =         1007         602         602
+ (sorted) pair # / total # of pairs =            0.657187223    
+ (sorted) pair #, event i, event j, rfactor_ij=        33000        1148        1374   10.0599995    
+ ntree, nbranch_i, nbranch_j =          996         612         612
+ (sorted) pair # / total # of pairs =            0.637272477    
+ (sorted) pair #, event i, event j, rfactor_ij=        32000          43         295   9.84000015    
+ ntree, nbranch_i, nbranch_j =          986         622         622
+ (sorted) pair # / total # of pairs =            0.617357731    
+ (sorted) pair #, event i, event j, rfactor_ij=        31000        1098        1256   9.64000034    
+ ntree, nbranch_i, nbranch_j =          977           1         631
+ (sorted) pair # / total # of pairs =            0.597442925    
+ (sorted) pair #, event i, event j, rfactor_ij=        30000         795        1221   9.44000053    
+ ntree, nbranch_i, nbranch_j =          973         634         634
+ (sorted) pair # / total # of pairs =            0.577528179    
+ (sorted) pair #, event i, event j, rfactor_ij=        29000         132        1155   9.24999905    
+ ntree, nbranch_i, nbranch_j =          966         640           4
+ (sorted) pair # / total # of pairs =            0.557613432    
+ (sorted) pair #, event i, event j, rfactor_ij=        28000         391        1502   9.05000019    
+ ntree, nbranch_i, nbranch_j =          962         644           4
+ (sorted) pair # / total # of pairs =            0.537698627    
+ (sorted) pair #, event i, event j, rfactor_ij=        27000         307        1427   8.88000011    
+ ntree, nbranch_i, nbranch_j =          959         647         647
+ (sorted) pair # / total # of pairs =            0.517783880    
+ (sorted) pair #, event i, event j, rfactor_ij=        26000         448        1025   8.69999886    
+ ntree, nbranch_i, nbranch_j =          954         652         652
+ (sorted) pair # / total # of pairs =            0.497869134    
+ (sorted) pair #, event i, event j, rfactor_ij=        25000         698        1224   8.52999973    
+ ntree, nbranch_i, nbranch_j =          952         654         654
+ (sorted) pair # / total # of pairs =            0.477954358    
+ (sorted) pair #, event i, event j, rfactor_ij=        24000         129         783   8.36000061    
+ ntree, nbranch_i, nbranch_j =          950         655         655
+ (sorted) pair # / total # of pairs =            0.458039582    
+ (sorted) pair #, event i, event j, rfactor_ij=        23000         818        1131   8.19000053    
+ ntree, nbranch_i, nbranch_j =          949         656         656
+ (sorted) pair # / total # of pairs =            0.438124835    
+ (sorted) pair #, event i, event j, rfactor_ij=        22000         630         968   8.02000046    
+ ntree, nbranch_i, nbranch_j =          947         658         658
+ (sorted) pair # / total # of pairs =            0.418210059    
+ (sorted) pair #, event i, event j, rfactor_ij=        21000        1107        1205   7.85000038    
+ ntree, nbranch_i, nbranch_j =          943         661         661
+ (sorted) pair # / total # of pairs =            0.398295283    
+ (sorted) pair #, event i, event j, rfactor_ij=        20000         569         824   7.68999958    
+ ntree, nbranch_i, nbranch_j =          938         666         666
+ (sorted) pair # / total # of pairs =            0.378380537    
+ (sorted) pair #, event i, event j, rfactor_ij=        19000         592         685   7.51999950    
+ ntree, nbranch_i, nbranch_j =          934         673         673
+ (sorted) pair # / total # of pairs =            0.358465761    
+ (sorted) pair #, event i, event j, rfactor_ij=        18000          35         472   7.34000015    
+ ntree, nbranch_i, nbranch_j =          931         676         676
+ (sorted) pair # / total # of pairs =            0.338551015    
+ (sorted) pair #, event i, event j, rfactor_ij=        17000         276         813   7.17999935    
+ ntree, nbranch_i, nbranch_j =          929         678         678
+ (sorted) pair # / total # of pairs =            0.318636239    
+ (sorted) pair #, event i, event j, rfactor_ij=        16000         249        1160   6.99000025    
+ ntree, nbranch_i, nbranch_j =          928         679         679
+ (sorted) pair # / total # of pairs =            0.298721462    
+ (sorted) pair #, event i, event j, rfactor_ij=        15000         716        1257   6.81999969    
+ ntree, nbranch_i, nbranch_j =          925         682         682
+ (sorted) pair # / total # of pairs =            0.278806716    
+ (sorted) pair #, event i, event j, rfactor_ij=        14000         120         682   6.64999962    
+ ntree, nbranch_i, nbranch_j =          919         688         688
+ (sorted) pair # / total # of pairs =            0.258891940    
+ (sorted) pair #, event i, event j, rfactor_ij=        13000         472         592   6.48000002    
+ ntree, nbranch_i, nbranch_j =          919         688         688
+ (sorted) pair # / total # of pairs =            0.238977179    
+ (sorted) pair #, event i, event j, rfactor_ij=        12000         363        1435   6.30999947    
+ ntree, nbranch_i, nbranch_j =          919         688         688
+ (sorted) pair # / total # of pairs =            0.219062418    
+ (sorted) pair #, event i, event j, rfactor_ij=        11000         833        1064   6.12999964    
+ ntree, nbranch_i, nbranch_j =          917         690         690
+ (sorted) pair # / total # of pairs =            0.199147642    
+ (sorted) pair #, event i, event j, rfactor_ij=        10000         326         472   5.93999910    
+ ntree, nbranch_i, nbranch_j =          917         690         690
+ (sorted) pair # / total # of pairs =            0.179232880    
+ (sorted) pair #, event i, event j, rfactor_ij=         9000         886        1191   5.74999952    
+ ntree, nbranch_i, nbranch_j =          915         692         692
+ (sorted) pair # / total # of pairs =            0.159318119    
+ (sorted) pair #, event i, event j, rfactor_ij=         8000         800         880   5.52999973    
+ ntree, nbranch_i, nbranch_j =          910         696         696
+ (sorted) pair # / total # of pairs =            0.139403358    
+ (sorted) pair #, event i, event j, rfactor_ij=         7000           4         698   5.31000042    
+ ntree, nbranch_i, nbranch_j =          906           3         702
+ (sorted) pair # / total # of pairs =            0.119488589    
+ (sorted) pair #, event i, event j, rfactor_ij=         6000         265         852   5.07000017    
+ ntree, nbranch_i, nbranch_j =          904         704         704
+ (sorted) pair # / total # of pairs =             9.95738208E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         5000         245         265   4.80999994    
+ ntree, nbranch_i, nbranch_j =          902         705         705
+ (sorted) pair # / total # of pairs =             7.96590596E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         4000         602         777   4.51000023    
+ ntree, nbranch_i, nbranch_j =          900         707         707
+ (sorted) pair # / total # of pairs =             5.97442947E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         3000         592        1261   4.13000011    
+ ntree, nbranch_i, nbranch_j =          897         710         710
+ (sorted) pair # / total # of pairs =             3.98295298E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         2000         874         963   3.71000004    
+ ntree, nbranch_i, nbranch_j =          895         712         712
+ (sorted) pair # / total # of pairs =             1.99147649E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         1000         600        1510   3.11000013    
+ ntree, nbranch_i, nbranch_j =          891         716         716
+ Done.
+ End of bootstrap iteration:            4
+ elapsed seconds =   14.2234039    
+ --------------------------------------------------
+  
+  
+ Maximum quake number =         1616
+ best pair follows (resampled data)
+      295324       23762         472         996   55.1099930    
+ (sorted) pair # / total # of pairs =            0.995738268    
+ (sorted) pair #, event i, event j, rfactor_ij=        50000         137         472   28.8599968    
+ ntree, nbranch_i, nbranch_j =         1551          43          43
+ (sorted) pair # / total # of pairs =            0.975823462    
+ (sorted) pair #, event i, event j, rfactor_ij=        49000         432         867   20.2800026    
+ ntree, nbranch_i, nbranch_j =         1413           1         203
+ (sorted) pair # / total # of pairs =            0.955908716    
+ (sorted) pair #, event i, event j, rfactor_ij=        48000        1062        1185   17.7100010    
+ ntree, nbranch_i, nbranch_j =         1349         267         267
+ (sorted) pair # / total # of pairs =            0.935993969    
+ (sorted) pair #, event i, event j, rfactor_ij=        47000         288        1219   16.3099995    
+ ntree, nbranch_i, nbranch_j =         1292         323         323
+ (sorted) pair # / total # of pairs =            0.916079164    
+ (sorted) pair #, event i, event j, rfactor_ij=        46000         130         908   15.2000008    
+ ntree, nbranch_i, nbranch_j =         1252         362         362
+ (sorted) pair # / total # of pairs =            0.896164417    
+ (sorted) pair #, event i, event j, rfactor_ij=        45000         637         844   14.4099989    
+ ntree, nbranch_i, nbranch_j =         1211         401         401
+ (sorted) pair # / total # of pairs =            0.876249671    
+ (sorted) pair #, event i, event j, rfactor_ij=        44000         800        1219   13.7399998    
+ ntree, nbranch_i, nbranch_j =         1183         429         429
+ (sorted) pair # / total # of pairs =            0.856334865    
+ (sorted) pair #, event i, event j, rfactor_ij=        43000         370        1199   13.2099991    
+ ntree, nbranch_i, nbranch_j =         1147         465         465
+ (sorted) pair # / total # of pairs =            0.836420119    
+ (sorted) pair #, event i, event j, rfactor_ij=        42000         798        1185   12.7100010    
+ ntree, nbranch_i, nbranch_j =         1123         490         490
+ (sorted) pair # / total # of pairs =            0.816505373    
+ (sorted) pair #, event i, event j, rfactor_ij=        41000         132         489   12.3299999    
+ ntree, nbranch_i, nbranch_j =         1105         507         507
+ (sorted) pair # / total # of pairs =            0.796590567    
+ (sorted) pair #, event i, event j, rfactor_ij=        40000         793         996   11.9499998    
+ ntree, nbranch_i, nbranch_j =         1085         528         528
+ (sorted) pair # / total # of pairs =            0.776675820    
+ (sorted) pair #, event i, event j, rfactor_ij=        39000         117         131   11.6200008    
+ ntree, nbranch_i, nbranch_j =         1062         554         554
+ (sorted) pair # / total # of pairs =            0.756761074    
+ (sorted) pair #, event i, event j, rfactor_ij=        38000         747        1373   11.3299999    
+ ntree, nbranch_i, nbranch_j =         1048         568         568
+ (sorted) pair # / total # of pairs =            0.736846268    
+ (sorted) pair #, event i, event j, rfactor_ij=        37000        1107        1261   11.0400000    
+ ntree, nbranch_i, nbranch_j =         1036         580         580
+ (sorted) pair # / total # of pairs =            0.716931522    
+ (sorted) pair #, event i, event j, rfactor_ij=        36000         432        1506   10.7700005    
+ ntree, nbranch_i, nbranch_j =         1025         591         591
+ (sorted) pair # / total # of pairs =            0.697016776    
+ (sorted) pair #, event i, event j, rfactor_ij=        35000         305         696   10.5199986    
+ ntree, nbranch_i, nbranch_j =         1019         597         597
+ (sorted) pair # / total # of pairs =            0.677102029    
+ (sorted) pair #, event i, event j, rfactor_ij=        34000         251        1483   10.2800007    
+ ntree, nbranch_i, nbranch_j =         1011         605         605
+ (sorted) pair # / total # of pairs =            0.657187223    
+ (sorted) pair #, event i, event j, rfactor_ij=        33000         282        1119   10.0600004    
+ ntree, nbranch_i, nbranch_j =         1006         610         610
+ (sorted) pair # / total # of pairs =            0.637272477    
+ (sorted) pair #, event i, event j, rfactor_ij=        32000          42        1008   9.85000134    
+ ntree, nbranch_i, nbranch_j =          990         625         625
+ (sorted) pair # / total # of pairs =            0.617357731    
+ (sorted) pair #, event i, event j, rfactor_ij=        31000         314         859   9.64999962    
+ ntree, nbranch_i, nbranch_j =          980         634         634
+ (sorted) pair # / total # of pairs =            0.597442925    
+ (sorted) pair #, event i, event j, rfactor_ij=        30000         140        1173   9.45999908    
+ ntree, nbranch_i, nbranch_j =          973         641         641
+ (sorted) pair # / total # of pairs =            0.577528179    
+ (sorted) pair #, event i, event j, rfactor_ij=        29000         245        1371   9.26999950    
+ ntree, nbranch_i, nbranch_j =          971         643         643
+ (sorted) pair # / total # of pairs =            0.557613432    
+ (sorted) pair #, event i, event j, rfactor_ij=        28000         172         401   9.07999992    
+ ntree, nbranch_i, nbranch_j =          967         647         647
+ (sorted) pair # / total # of pairs =            0.537698627    
+ (sorted) pair #, event i, event j, rfactor_ij=        27000         951        1502   8.89000034    
+ ntree, nbranch_i, nbranch_j =          958         655         655
+ (sorted) pair # / total # of pairs =            0.517783880    
+ (sorted) pair #, event i, event j, rfactor_ij=        26000         329        1472   8.71000004    
+ ntree, nbranch_i, nbranch_j =          957         656         656
+ (sorted) pair # / total # of pairs =            0.497869134    
+ (sorted) pair #, event i, event j, rfactor_ij=        25000         569         761   8.53999996    
+ ntree, nbranch_i, nbranch_j =          951         661         661
+ (sorted) pair # / total # of pairs =            0.477954358    
+ (sorted) pair #, event i, event j, rfactor_ij=        24000         628        1031   8.36999989    
+ ntree, nbranch_i, nbranch_j =          946         665         665
+ (sorted) pair # / total # of pairs =            0.458039582    
+ (sorted) pair #, event i, event j, rfactor_ij=        23000         325        1228   8.20000076    
+ ntree, nbranch_i, nbranch_j =          944         668         668
+ (sorted) pair # / total # of pairs =            0.438124835    
+ (sorted) pair #, event i, event j, rfactor_ij=        22000         942        1607   8.03000069    
+ ntree, nbranch_i, nbranch_j =          943         669         669
+ (sorted) pair # / total # of pairs =            0.418210059    
+ (sorted) pair #, event i, event j, rfactor_ij=        21000         289         777   7.86000013    
+ ntree, nbranch_i, nbranch_j =          940         672         672
+ (sorted) pair # / total # of pairs =            0.398295283    
+ (sorted) pair #, event i, event j, rfactor_ij=        20000        1499        1554   7.69000006    
+ ntree, nbranch_i, nbranch_j =          939         673         673
+ (sorted) pair # / total # of pairs =            0.378380537    
+ (sorted) pair #, event i, event j, rfactor_ij=        19000         239        1110   7.51999998    
+ ntree, nbranch_i, nbranch_j =          933         676           1
+ (sorted) pair # / total # of pairs =            0.358465761    
+ (sorted) pair #, event i, event j, rfactor_ij=        18000         414         837   7.35000038    
+ ntree, nbranch_i, nbranch_j =          933         676         676
+ (sorted) pair # / total # of pairs =            0.338551015    
+ (sorted) pair #, event i, event j, rfactor_ij=        17000         239         789   7.18000031    
+ ntree, nbranch_i, nbranch_j =          930         679         679
+ (sorted) pair # / total # of pairs =            0.318636239    
+ (sorted) pair #, event i, event j, rfactor_ij=        16000         272         908   7.01000023    
+ ntree, nbranch_i, nbranch_j =          928         681         681
+ (sorted) pair # / total # of pairs =            0.298721462    
+ (sorted) pair #, event i, event j, rfactor_ij=        15000         873         884   6.84000015    
+ ntree, nbranch_i, nbranch_j =          927           1         682
+ (sorted) pair # / total # of pairs =            0.278806716    
+ (sorted) pair #, event i, event j, rfactor_ij=        14000          44         155   6.66000032    
+ ntree, nbranch_i, nbranch_j =          925         684         684
+ (sorted) pair # / total # of pairs =            0.258891940    
+ (sorted) pair #, event i, event j, rfactor_ij=        13000         742        1221   6.49000025    
+ ntree, nbranch_i, nbranch_j =          922         687         687
+ (sorted) pair # / total # of pairs =            0.238977179    
+ (sorted) pair #, event i, event j, rfactor_ij=        12000         800        1005   6.30999994    
+ ntree, nbranch_i, nbranch_j =          922         687         687
+ (sorted) pair # / total # of pairs =            0.219062418    
+ (sorted) pair #, event i, event j, rfactor_ij=        11000        1082        1256   6.12999964    
+ ntree, nbranch_i, nbranch_j =          921         687         687
+ (sorted) pair # / total # of pairs =            0.199147642    
+ (sorted) pair #, event i, event j, rfactor_ij=        10000         880        1427   5.93000031    
+ ntree, nbranch_i, nbranch_j =          919         689         689
+ (sorted) pair # / total # of pairs =            0.179232880    
+ (sorted) pair #, event i, event j, rfactor_ij=         9000         969        1157   5.73999977    
+ ntree, nbranch_i, nbranch_j =          917         691         691
+ (sorted) pair # / total # of pairs =            0.159318119    
+ (sorted) pair #, event i, event j, rfactor_ij=         8000         245         458   5.53000021    
+ ntree, nbranch_i, nbranch_j =          914         694         694
+ (sorted) pair # / total # of pairs =            0.139403358    
+ (sorted) pair #, event i, event j, rfactor_ij=         7000         852        1446   5.32000017    
+ ntree, nbranch_i, nbranch_j =          910         698         698
+ (sorted) pair # / total # of pairs =            0.119488589    
+ (sorted) pair #, event i, event j, rfactor_ij=         6000         306         845   5.06999969    
+ ntree, nbranch_i, nbranch_j =          909         699         699
+ (sorted) pair # / total # of pairs =             9.95738208E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         5000         414        1121   4.77999973    
+ ntree, nbranch_i, nbranch_j =          908         700         700
+ (sorted) pair # / total # of pairs =             7.96590596E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         4000         465         601   4.49000025    
+ ntree, nbranch_i, nbranch_j =          908         700         700
+ (sorted) pair # / total # of pairs =             5.97442947E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         3000         725        1261   4.11000013    
+ ntree, nbranch_i, nbranch_j =          905         703         703
+ (sorted) pair # / total # of pairs =             3.98295298E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         2000         628         981   3.70000029    
+ ntree, nbranch_i, nbranch_j =          901         710         710
+ (sorted) pair # / total # of pairs =             1.99147649E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         1000         629         749   3.06999993    
+ ntree, nbranch_i, nbranch_j =          898         713         713
+ Done.
+ End of bootstrap iteration:            5
+ elapsed seconds =   12.5664291    
+ --------------------------------------------------
+  
+  
+ Maximum quake number =         1616
+ best pair follows (resampled data)
+      295520       23762         472         996   57.1800003    
+ (sorted) pair # / total # of pairs =            0.995738268    
+ (sorted) pair #, event i, event j, rfactor_ij=        50000        1374        1456   28.7699986    
+ ntree, nbranch_i, nbranch_j =         1553           1          18
+ (sorted) pair # / total # of pairs =            0.975823462    
+ (sorted) pair #, event i, event j, rfactor_ij=        49000        1122        1472   20.3599987    
+ ntree, nbranch_i, nbranch_j =         1417         199         199
+ (sorted) pair # / total # of pairs =            0.955908716    
+ (sorted) pair #, event i, event j, rfactor_ij=        48000          69         325   17.8200016    
+ ntree, nbranch_i, nbranch_j =         1348         266         266
+ (sorted) pair # / total # of pairs =            0.935993969    
+ (sorted) pair #, event i, event j, rfactor_ij=        47000         372        1131   16.2700005    
+ ntree, nbranch_i, nbranch_j =         1279         332         332
+ (sorted) pair # / total # of pairs =            0.916079164    
+ (sorted) pair #, event i, event j, rfactor_ij=        46000         314         701   15.2199993    
+ ntree, nbranch_i, nbranch_j =         1231         381         381
+ (sorted) pair # / total # of pairs =            0.896164417    
+ (sorted) pair #, event i, event j, rfactor_ij=        45000         654         685   14.4099998    
+ ntree, nbranch_i, nbranch_j =         1193         423         423
+ (sorted) pair # / total # of pairs =            0.876249671    
+ (sorted) pair #, event i, event j, rfactor_ij=        44000         456         874   13.7299986    
+ ntree, nbranch_i, nbranch_j =         1153         463         463
+ (sorted) pair # / total # of pairs =            0.856334865    
+ (sorted) pair #, event i, event j, rfactor_ij=        43000         612        1435   13.2000008    
+ ntree, nbranch_i, nbranch_j =         1126         489         489
+ (sorted) pair # / total # of pairs =            0.836420119    
+ (sorted) pair #, event i, event j, rfactor_ij=        42000        1039        1199   12.7599993    
+ ntree, nbranch_i, nbranch_j =         1105         510         510
+ (sorted) pair # / total # of pairs =            0.816505373    
+ (sorted) pair #, event i, event j, rfactor_ij=        41000         613         847   12.3499985    
+ ntree, nbranch_i, nbranch_j =         1080         535         535
+ (sorted) pair # / total # of pairs =            0.796590567    
+ (sorted) pair #, event i, event j, rfactor_ij=        40000        1471        1510   11.9899998    
+ ntree, nbranch_i, nbranch_j =         1061           1         554
+ (sorted) pair # / total # of pairs =            0.776675820    
+ (sorted) pair #, event i, event j, rfactor_ij=        39000        1222        1286   11.6500006    
+ ntree, nbranch_i, nbranch_j =         1049         567           1
+ (sorted) pair # / total # of pairs =            0.756761074    
+ (sorted) pair #, event i, event j, rfactor_ij=        38000         779        1456   11.3400011    
+ ntree, nbranch_i, nbranch_j =         1034         581         581
+ (sorted) pair # / total # of pairs =            0.736846268    
+ (sorted) pair #, event i, event j, rfactor_ij=        37000         129        1472   11.0500002    
+ ntree, nbranch_i, nbranch_j =         1025         590         590
+ (sorted) pair # / total # of pairs =            0.716931522    
+ (sorted) pair #, event i, event j, rfactor_ij=        36000        1082        1330   10.7800007    
+ ntree, nbranch_i, nbranch_j =         1017         598         598
+ (sorted) pair # / total # of pairs =            0.697016776    
+ (sorted) pair #, event i, event j, rfactor_ij=        35000         685        1257   10.5399990    
+ ntree, nbranch_i, nbranch_j =         1009         606         606
+ (sorted) pair # / total # of pairs =            0.677102029    
+ (sorted) pair #, event i, event j, rfactor_ij=        34000         628        1076   10.2999992    
+ ntree, nbranch_i, nbranch_j =         1001         613         613
+ (sorted) pair # / total # of pairs =            0.657187223    
+ (sorted) pair #, event i, event j, rfactor_ij=        33000         102         314   10.0599995    
+ ntree, nbranch_i, nbranch_j =          996         618         618
+ (sorted) pair # / total # of pairs =            0.637272477    
+ (sorted) pair #, event i, event j, rfactor_ij=        32000        1495        1513   9.83999920    
+ ntree, nbranch_i, nbranch_j =          987         625         625
+ (sorted) pair # / total # of pairs =            0.617357731    
+ (sorted) pair #, event i, event j, rfactor_ij=        31000         654         996   9.62000084    
+ ntree, nbranch_i, nbranch_j =          979         631         631
+ (sorted) pair # / total # of pairs =            0.597442925    
+ (sorted) pair #, event i, event j, rfactor_ij=        30000          61        1107   9.42000008    
+ ntree, nbranch_i, nbranch_j =          974         636         636
+ (sorted) pair # / total # of pairs =            0.577528179    
+ (sorted) pair #, event i, event j, rfactor_ij=        29000         239        1115   9.22000122    
+ ntree, nbranch_i, nbranch_j =          964         646         646
+ (sorted) pair # / total # of pairs =            0.557613432    
+ (sorted) pair #, event i, event j, rfactor_ij=        28000        1382        1435   9.03000069    
+ ntree, nbranch_i, nbranch_j =          959         651         651
+ (sorted) pair # / total # of pairs =            0.537698627    
+ (sorted) pair #, event i, event j, rfactor_ij=        27000         456        1133   8.85000038    
+ ntree, nbranch_i, nbranch_j =          957         653         653
+ (sorted) pair # / total # of pairs =            0.517783880    
+ (sorted) pair #, event i, event j, rfactor_ij=        26000        1218        1438   8.68999958    
+ ntree, nbranch_i, nbranch_j =          954         656         656
+ (sorted) pair # / total # of pairs =            0.497869134    
+ (sorted) pair #, event i, event j, rfactor_ij=        25000         245         718   8.51999950    
+ ntree, nbranch_i, nbranch_j =          952         658         658
+ (sorted) pair # / total # of pairs =            0.477954358    
+ (sorted) pair #, event i, event j, rfactor_ij=        24000         630        1031   8.34999943    
+ ntree, nbranch_i, nbranch_j =          949         661         661
+ (sorted) pair # / total # of pairs =            0.458039582    
+ (sorted) pair #, event i, event j, rfactor_ij=        23000         288        1382   8.18000031    
+ ntree, nbranch_i, nbranch_j =          945         665         665
+ (sorted) pair # / total # of pairs =            0.438124835    
+ (sorted) pair #, event i, event j, rfactor_ij=        22000         581         592   8.00000095    
+ ntree, nbranch_i, nbranch_j =          941         669         669
+ (sorted) pair # / total # of pairs =            0.418210059    
+ (sorted) pair #, event i, event j, rfactor_ij=        21000         102        1018   7.83999920    
+ ntree, nbranch_i, nbranch_j =          937         672         672
+ (sorted) pair # / total # of pairs =            0.398295283    
+ (sorted) pair #, event i, event j, rfactor_ij=        20000         835        1005   7.67000055    
+ ntree, nbranch_i, nbranch_j =          935         674         674
+ (sorted) pair # / total # of pairs =            0.378380537    
+ (sorted) pair #, event i, event j, rfactor_ij=        19000         295        1195   7.51000023    
+ ntree, nbranch_i, nbranch_j =          931         678         678
+ (sorted) pair # / total # of pairs =            0.358465761    
+ (sorted) pair #, event i, event j, rfactor_ij=        18000         288        1158   7.35000038    
+ ntree, nbranch_i, nbranch_j =          930         679         679
+ (sorted) pair # / total # of pairs =            0.338551015    
+ (sorted) pair #, event i, event j, rfactor_ij=        17000         630        1554   7.19000053    
+ ntree, nbranch_i, nbranch_j =          929         680         680
+ (sorted) pair # / total # of pairs =            0.318636239    
+ (sorted) pair #, event i, event j, rfactor_ij=        16000         777        1363   7.01000118    
+ ntree, nbranch_i, nbranch_j =          927         683         683
+ (sorted) pair # / total # of pairs =            0.298721462    
+ (sorted) pair #, event i, event j, rfactor_ij=        15000         407         629   6.84000015    
+ ntree, nbranch_i, nbranch_j =          923         686         686
+ (sorted) pair # / total # of pairs =            0.278806716    
+ (sorted) pair #, event i, event j, rfactor_ij=        14000         742         882   6.67999935    
+ ntree, nbranch_i, nbranch_j =          919         690         690
+ (sorted) pair # / total # of pairs =            0.258891940    
+ (sorted) pair #, event i, event j, rfactor_ij=        13000         789        1554   6.50000048    
+ ntree, nbranch_i, nbranch_j =          919         690         690
+ (sorted) pair # / total # of pairs =            0.238977179    
+ (sorted) pair #, event i, event j, rfactor_ij=        12000         924        1133   6.32999945    
+ ntree, nbranch_i, nbranch_j =          918         690         690
+ (sorted) pair # / total # of pairs =            0.219062418    
+ (sorted) pair #, event i, event j, rfactor_ij=        11000         882        1008   6.13999987    
+ ntree, nbranch_i, nbranch_j =          916         692         692
+ (sorted) pair # / total # of pairs =            0.199147642    
+ (sorted) pair #, event i, event j, rfactor_ij=        10000        1064        1256   5.94999981    
+ ntree, nbranch_i, nbranch_j =          914         694         694
+ (sorted) pair # / total # of pairs =            0.179232880    
+ (sorted) pair #, event i, event j, rfactor_ij=         9000         372         702   5.74000025    
+ ntree, nbranch_i, nbranch_j =          912         696         696
+ (sorted) pair # / total # of pairs =            0.159318119    
+ (sorted) pair #, event i, event j, rfactor_ij=         8000        1427        1434   5.52999973    
+ ntree, nbranch_i, nbranch_j =          912         696         696
+ (sorted) pair # / total # of pairs =            0.139403358    
+ (sorted) pair #, event i, event j, rfactor_ij=         7000         207         611   5.30000019    
+ ntree, nbranch_i, nbranch_j =          910         697         697
+ (sorted) pair # / total # of pairs =            0.119488589    
+ (sorted) pair #, event i, event j, rfactor_ij=         6000         920        1048   5.05999994    
+ ntree, nbranch_i, nbranch_j =          908         699         699
+ (sorted) pair # / total # of pairs =             9.95738208E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         5000         133         471   4.78000069    
+ ntree, nbranch_i, nbranch_j =          907         700         700
+ (sorted) pair # / total # of pairs =             7.96590596E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         4000         236         640   4.49000025    
+ ntree, nbranch_i, nbranch_j =          903         704         704
+ (sorted) pair # / total # of pairs =             5.97442947E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         3000         687        1373   4.14000034    
+ ntree, nbranch_i, nbranch_j =          901         706         706
+ (sorted) pair # / total # of pairs =             3.98295298E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         2000        1186        1386   3.74000001    
+ ntree, nbranch_i, nbranch_j =          898         709         709
+ (sorted) pair # / total # of pairs =             1.99147649E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         1000         698        1590   3.08999991    
+ ntree, nbranch_i, nbranch_j =          897         710         710
+ Done.
+ End of bootstrap iteration:            6
+ elapsed seconds =   11.7880554    
+ --------------------------------------------------
+  
+  
+ Maximum quake number =         1616
+ best pair follows (resampled data)
+      295678       23762         472         996   59.7599983    
+ (sorted) pair # / total # of pairs =            0.995738268    
+ (sorted) pair #, event i, event j, rfactor_ij=        50000         135         613   29.0300026    
+ ntree, nbranch_i, nbranch_j =         1544          48           1
+ (sorted) pair # / total # of pairs =            0.975823462    
+ (sorted) pair #, event i, event j, rfactor_ij=        49000         132        1256   20.4300022    
+ ntree, nbranch_i, nbranch_j =         1424         189         189
+ (sorted) pair # / total # of pairs =            0.955908716    
+ (sorted) pair #, event i, event j, rfactor_ij=        48000         278         902   17.7399998    
+ ntree, nbranch_i, nbranch_j =         1349         261           1
+ (sorted) pair # / total # of pairs =            0.935993969    
+ (sorted) pair #, event i, event j, rfactor_ij=        47000        1053        1438   16.2700005    
+ ntree, nbranch_i, nbranch_j =         1300         310         310
+ (sorted) pair # / total # of pairs =            0.916079164    
+ (sorted) pair #, event i, event j, rfactor_ij=        46000         654        1539   15.2399998    
+ ntree, nbranch_i, nbranch_j =         1255         357         357
+ (sorted) pair # / total # of pairs =            0.896164417    
+ (sorted) pair #, event i, event j, rfactor_ij=        45000          44        1538   14.4500008    
+ ntree, nbranch_i, nbranch_j =         1210         401         401
+ (sorted) pair # / total # of pairs =            0.876249671    
+ (sorted) pair #, event i, event j, rfactor_ij=        44000          44          82   13.8100014    
+ ntree, nbranch_i, nbranch_j =         1167         445         445
+ (sorted) pair # / total # of pairs =            0.856334865    
+ (sorted) pair #, event i, event j, rfactor_ij=        43000         599        1065   13.2399998    
+ ntree, nbranch_i, nbranch_j =         1139         473         473
+ (sorted) pair # / total # of pairs =            0.836420119    
+ (sorted) pair #, event i, event j, rfactor_ij=        42000         783        1062   12.7599993    
+ ntree, nbranch_i, nbranch_j =         1114         499         499
+ (sorted) pair # / total # of pairs =            0.816505373    
+ (sorted) pair #, event i, event j, rfactor_ij=        41000         610         841   12.3400002    
+ ntree, nbranch_i, nbranch_j =         1090         525         525
+ (sorted) pair # / total # of pairs =            0.796590567    
+ (sorted) pair #, event i, event j, rfactor_ij=        40000         495         581   11.9699993    
+ ntree, nbranch_i, nbranch_j =         1075         540         540
+ (sorted) pair # / total # of pairs =            0.776675820    
+ (sorted) pair #, event i, event j, rfactor_ij=        39000         370         698   11.6300001    
+ ntree, nbranch_i, nbranch_j =         1061         554         554
+ (sorted) pair # / total # of pairs =            0.756761074    
+ (sorted) pair #, event i, event j, rfactor_ij=        38000         141         793   11.3299990    
+ ntree, nbranch_i, nbranch_j =         1047         568         568
+ (sorted) pair # / total # of pairs =            0.736846268    
+ (sorted) pair #, event i, event j, rfactor_ij=        37000         214        1122   11.0400000    
+ ntree, nbranch_i, nbranch_j =         1039         576         576
+ (sorted) pair # / total # of pairs =            0.716931522    
+ (sorted) pair #, event i, event j, rfactor_ij=        36000         580         856   10.7799988    
+ ntree, nbranch_i, nbranch_j =         1023         592         592
+ (sorted) pair # / total # of pairs =            0.697016776    
+ (sorted) pair #, event i, event j, rfactor_ij=        35000          11        1004   10.5300007    
+ ntree, nbranch_i, nbranch_j =         1015         599         599
+ (sorted) pair # / total # of pairs =            0.677102029    
+ (sorted) pair #, event i, event j, rfactor_ij=        34000         527         701   10.2800007    
+ ntree, nbranch_i, nbranch_j =         1009         605         605
+ (sorted) pair # / total # of pairs =            0.657187223    
+ (sorted) pair #, event i, event j, rfactor_ij=        33000         682        1374   10.0699997    
+ ntree, nbranch_i, nbranch_j =         1003         610         610
+ (sorted) pair # / total # of pairs =            0.637272477    
+ (sorted) pair #, event i, event j, rfactor_ij=        32000         828         974   9.85000038    
+ ntree, nbranch_i, nbranch_j =          995         618         618
+ (sorted) pair # / total # of pairs =            0.617357731    
+ (sorted) pair #, event i, event j, rfactor_ij=        31000        1362        1488   9.65000057    
+ ntree, nbranch_i, nbranch_j =          987         626         626
+ (sorted) pair # / total # of pairs =            0.597442925    
+ (sorted) pair #, event i, event j, rfactor_ij=        30000         793        1530   9.44000053    
+ ntree, nbranch_i, nbranch_j =          978         634         634
+ (sorted) pair # / total # of pairs =            0.577528179    
+ (sorted) pair #, event i, event j, rfactor_ij=        29000        1171        1191   9.24000072    
+ ntree, nbranch_i, nbranch_j =          972         640         640
+ (sorted) pair # / total # of pairs =            0.557613432    
+ (sorted) pair #, event i, event j, rfactor_ij=        28000         311         974   9.05000019    
+ ntree, nbranch_i, nbranch_j =          967         644         644
+ (sorted) pair # / total # of pairs =            0.537698627    
+ (sorted) pair #, event i, event j, rfactor_ij=        27000        1004        1168   8.86000061    
+ ntree, nbranch_i, nbranch_j =          964         647         647
+ (sorted) pair # / total # of pairs =            0.517783880    
+ (sorted) pair #, event i, event j, rfactor_ij=        26000        1131        1237   8.68999958    
+ ntree, nbranch_i, nbranch_j =          960         651         651
+ (sorted) pair # / total # of pairs =            0.497869134    
+ (sorted) pair #, event i, event j, rfactor_ij=        25000         132         789   8.51000023    
+ ntree, nbranch_i, nbranch_j =          956         655         655
+ (sorted) pair # / total # of pairs =            0.477954358    
+ (sorted) pair #, event i, event j, rfactor_ij=        24000         823        1232   8.33000088    
+ ntree, nbranch_i, nbranch_j =          954         657         657
+ (sorted) pair # / total # of pairs =            0.458039582    
+ (sorted) pair #, event i, event j, rfactor_ij=        23000        1121        1200   8.16999912    
+ ntree, nbranch_i, nbranch_j =          949         662         662
+ (sorted) pair # / total # of pairs =            0.438124835    
+ (sorted) pair #, event i, event j, rfactor_ij=        22000         612        1438   7.99000072    
+ ntree, nbranch_i, nbranch_j =          947         664         664
+ (sorted) pair # / total # of pairs =            0.418210059    
+ (sorted) pair #, event i, event j, rfactor_ij=        21000         407        1457   7.82999992    
+ ntree, nbranch_i, nbranch_j =          944         665         665
+ (sorted) pair # / total # of pairs =            0.398295283    
+ (sorted) pair #, event i, event j, rfactor_ij=        20000         626        1181   7.66000032    
+ ntree, nbranch_i, nbranch_j =          941         667         667
+ (sorted) pair # / total # of pairs =            0.378380537    
+ (sorted) pair #, event i, event j, rfactor_ij=        19000         886        1185   7.49999952    
+ ntree, nbranch_i, nbranch_j =          936         672         672
+ (sorted) pair # / total # of pairs =            0.358465761    
+ (sorted) pair #, event i, event j, rfactor_ij=        18000         456         962   7.33000040    
+ ntree, nbranch_i, nbranch_j =          933         675         675
+ (sorted) pair # / total # of pairs =            0.338551015    
+ (sorted) pair #, event i, event j, rfactor_ij=        17000          35         251   7.17000008    
+ ntree, nbranch_i, nbranch_j =          932         676         676
+ (sorted) pair # / total # of pairs =            0.318636239    
+ (sorted) pair #, event i, event j, rfactor_ij=        16000        1396        1409   7.00000000    
+ ntree, nbranch_i, nbranch_j =          928         680         680
+ (sorted) pair # / total # of pairs =            0.298721462    
+ (sorted) pair #, event i, event j, rfactor_ij=        15000         657        1005   6.82000065    
+ ntree, nbranch_i, nbranch_j =          924         691         691
+ (sorted) pair # / total # of pairs =            0.278806716    
+ (sorted) pair #, event i, event j, rfactor_ij=        14000         626         974   6.64999914    
+ ntree, nbranch_i, nbranch_j =          924         691         691
+ (sorted) pair # / total # of pairs =            0.258891940    
+ (sorted) pair #, event i, event j, rfactor_ij=        13000        1221        1509   6.47000027    
+ ntree, nbranch_i, nbranch_j =          920         695         695
+ (sorted) pair # / total # of pairs =            0.238977179    
+ (sorted) pair #, event i, event j, rfactor_ij=        12000         968        1382   6.28999996    
+ ntree, nbranch_i, nbranch_j =          918         697         697
+ (sorted) pair # / total # of pairs =            0.219062418    
+ (sorted) pair #, event i, event j, rfactor_ij=        11000         236         777   6.09999990    
+ ntree, nbranch_i, nbranch_j =          915         699         699
+ (sorted) pair # / total # of pairs =            0.199147642    
+ (sorted) pair #, event i, event j, rfactor_ij=        10000         592        1240   5.90999985    
+ ntree, nbranch_i, nbranch_j =          913         701         701
+ (sorted) pair # / total # of pairs =            0.179232880    
+ (sorted) pair #, event i, event j, rfactor_ij=         9000         140        1382   5.72000027    
+ ntree, nbranch_i, nbranch_j =          909         705         705
+ (sorted) pair # / total # of pairs =            0.159318119    
+ (sorted) pair #, event i, event j, rfactor_ij=         8000         139        1099   5.50999975    
+ ntree, nbranch_i, nbranch_j =          906         707           1
+ (sorted) pair # / total # of pairs =            0.139403358    
+ (sorted) pair #, event i, event j, rfactor_ij=         7000         214        1080   5.27000046    
+ ntree, nbranch_i, nbranch_j =          905         708         708
+ (sorted) pair # / total # of pairs =            0.119488589    
+ (sorted) pair #, event i, event j, rfactor_ij=         6000         120        1163   5.03999996    
+ ntree, nbranch_i, nbranch_j =          904         709         709
+ (sorted) pair # / total # of pairs =             9.95738208E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         5000         882        1155   4.78000021    
+ ntree, nbranch_i, nbranch_j =          904         709         709
+ (sorted) pair # / total # of pairs =             7.96590596E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         4000         335         836   4.48999977    
+ ntree, nbranch_i, nbranch_j =          903         710         710
+ (sorted) pair # / total # of pairs =             5.97442947E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         3000         495        1205   4.11000013    
+ ntree, nbranch_i, nbranch_j =          903         710         710
+ (sorted) pair # / total # of pairs =             3.98295298E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         2000         882        1214   3.69999981    
+ ntree, nbranch_i, nbranch_j =          902         711         711
+ (sorted) pair # / total # of pairs =             1.99147649E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         1000         276         742   3.07999992    
+ ntree, nbranch_i, nbranch_j =          900         713         713
+ Done.
+ End of bootstrap iteration:            7
+ elapsed seconds =   13.3712158    
+ --------------------------------------------------
+  
+  
+ Maximum quake number =         1616
+ best pair follows (resampled data)
+      293048       23619         472         495   53.0800095    
+ (sorted) pair # / total # of pairs =            0.995738268    
+ (sorted) pair #, event i, event j, rfactor_ij=        50000         740        1538   29.4299984    
+ ntree, nbranch_i, nbranch_j =         1549           1           1
+ (sorted) pair # / total # of pairs =            0.975823462    
+ (sorted) pair #, event i, event j, rfactor_ij=        49000         132         263   20.2900047    
+ ntree, nbranch_i, nbranch_j =         1427         190         190
+ (sorted) pair # / total # of pairs =            0.955908716    
+ (sorted) pair #, event i, event j, rfactor_ij=        48000         368         859   17.7599964    
+ ntree, nbranch_i, nbranch_j =         1351         261         261
+ (sorted) pair # / total # of pairs =            0.935993969    
+ (sorted) pair #, event i, event j, rfactor_ij=        47000         129         280   16.3199978    
+ ntree, nbranch_i, nbranch_j =         1297         313         313
+ (sorted) pair # / total # of pairs =            0.916079164    
+ (sorted) pair #, event i, event j, rfactor_ij=        46000          43          82   15.2600021    
+ ntree, nbranch_i, nbranch_j =         1247         364         364
+ (sorted) pair # / total # of pairs =            0.896164417    
+ (sorted) pair #, event i, event j, rfactor_ij=        45000         128        1076   14.4400005    
+ ntree, nbranch_i, nbranch_j =         1201         410         410
+ (sorted) pair # / total # of pairs =            0.876249671    
+ (sorted) pair #, event i, event j, rfactor_ij=        44000        1147        1457   13.7999992    
+ ntree, nbranch_i, nbranch_j =         1157         454         454
+ (sorted) pair # / total # of pairs =            0.856334865    
+ (sorted) pair #, event i, event j, rfactor_ij=        43000        1304        1539   13.2400017    
+ ntree, nbranch_i, nbranch_j =         1124         487         487
+ (sorted) pair # / total # of pairs =            0.836420119    
+ (sorted) pair #, event i, event j, rfactor_ij=        42000         771        1434   12.7599983    
+ ntree, nbranch_i, nbranch_j =         1106         505         505
+ (sorted) pair # / total # of pairs =            0.816505373    
+ (sorted) pair #, event i, event j, rfactor_ij=        41000          47         278   12.3300018    
+ ntree, nbranch_i, nbranch_j =         1082         531         531
+ (sorted) pair # / total # of pairs =            0.796590567    
+ (sorted) pair #, event i, event j, rfactor_ij=        40000         456         715   11.9699984    
+ ntree, nbranch_i, nbranch_j =         1062         552         552
+ (sorted) pair # / total # of pairs =            0.776675820    
+ (sorted) pair #, event i, event j, rfactor_ij=        39000         137         781   11.6400013    
+ ntree, nbranch_i, nbranch_j =         1038         574         574
+ (sorted) pair # / total # of pairs =            0.756761074    
+ (sorted) pair #, event i, event j, rfactor_ij=        38000         658         781   11.3299999    
+ ntree, nbranch_i, nbranch_j =         1025         587         587
+ (sorted) pair # / total # of pairs =            0.736846268    
+ (sorted) pair #, event i, event j, rfactor_ij=        37000          61         852   11.0499992    
+ ntree, nbranch_i, nbranch_j =         1020         592         592
+ (sorted) pair # / total # of pairs =            0.716931522    
+ (sorted) pair #, event i, event j, rfactor_ij=        36000         856        1062   10.7699995    
+ ntree, nbranch_i, nbranch_j =         1007         605         605
+ (sorted) pair # / total # of pairs =            0.697016776    
+ (sorted) pair #, event i, event j, rfactor_ij=        35000         263         960   10.5199995    
+ ntree, nbranch_i, nbranch_j =          997         614         614
+ (sorted) pair # / total # of pairs =            0.677102029    
+ (sorted) pair #, event i, event j, rfactor_ij=        34000         761         766   10.2699995    
+ ntree, nbranch_i, nbranch_j =          988         622         622
+ (sorted) pair # / total # of pairs =            0.657187223    
+ (sorted) pair #, event i, event j, rfactor_ij=        33000         623        1163   10.0400000    
+ ntree, nbranch_i, nbranch_j =          982         628         628
+ (sorted) pair # / total # of pairs =            0.637272477    
+ (sorted) pair #, event i, event j, rfactor_ij=        32000         599        1089   9.84000015    
+ ntree, nbranch_i, nbranch_j =          975         635         635
+ (sorted) pair # / total # of pairs =            0.617357731    
+ (sorted) pair #, event i, event j, rfactor_ij=        31000         139        1205   9.63000011    
+ ntree, nbranch_i, nbranch_j =          972         637         637
+ (sorted) pair # / total # of pairs =            0.597442925    
+ (sorted) pair #, event i, event j, rfactor_ij=        30000         489        1164   9.43999958    
+ ntree, nbranch_i, nbranch_j =          965         643         643
+ (sorted) pair # / total # of pairs =            0.577528179    
+ (sorted) pair #, event i, event j, rfactor_ij=        29000         849        1331   9.25000000    
+ ntree, nbranch_i, nbranch_j =          959         649         649
+ (sorted) pair # / total # of pairs =            0.557613432    
+ (sorted) pair #, event i, event j, rfactor_ij=        28000         696        1435   9.04999924    
+ ntree, nbranch_i, nbranch_j =          955         654         654
+ (sorted) pair # / total # of pairs =            0.537698627    
+ (sorted) pair #, event i, event j, rfactor_ij=        27000          86         818   8.86000061    
+ ntree, nbranch_i, nbranch_j =          952         657         657
+ (sorted) pair # / total # of pairs =            0.517783880    
+ (sorted) pair #, event i, event j, rfactor_ij=        26000        1003        1510   8.67999935    
+ ntree, nbranch_i, nbranch_j =          947         662         662
+ (sorted) pair # / total # of pairs =            0.497869134    
+ (sorted) pair #, event i, event j, rfactor_ij=        25000         906        1373   8.50000000    
+ ntree, nbranch_i, nbranch_j =          946         663         663
+ (sorted) pair # / total # of pairs =            0.477954358    
+ (sorted) pair #, event i, event j, rfactor_ij=        24000         818         827   8.32999992    
+ ntree, nbranch_i, nbranch_j =          942         667         667
+ (sorted) pair # / total # of pairs =            0.458039582    
+ (sorted) pair #, event i, event j, rfactor_ij=        23000         885        1371   8.15999985    
+ ntree, nbranch_i, nbranch_j =          938         670         670
+ (sorted) pair # / total # of pairs =            0.438124835    
+ (sorted) pair #, event i, event j, rfactor_ij=        22000         859         974   7.99999952    
+ ntree, nbranch_i, nbranch_j =          936         672         672
+ (sorted) pair # / total # of pairs =            0.418210059    
+ (sorted) pair #, event i, event j, rfactor_ij=        21000        1121        1476   7.82000017    
+ ntree, nbranch_i, nbranch_j =          934         674         674
+ (sorted) pair # / total # of pairs =            0.398295283    
+ (sorted) pair #, event i, event j, rfactor_ij=        20000         751         798   7.65000010    
+ ntree, nbranch_i, nbranch_j =          932         676         676
+ (sorted) pair # / total # of pairs =            0.378380537    
+ (sorted) pair #, event i, event j, rfactor_ij=        19000         125         630   7.48999977    
+ ntree, nbranch_i, nbranch_j =          931         677         677
+ (sorted) pair # / total # of pairs =            0.358465761    
+ (sorted) pair #, event i, event j, rfactor_ij=        18000         600         968   7.33000040    
+ ntree, nbranch_i, nbranch_j =          928         680         680
+ (sorted) pair # / total # of pairs =            0.338551015    
+ (sorted) pair #, event i, event j, rfactor_ij=        17000         561         629   7.16999960    
+ ntree, nbranch_i, nbranch_j =          928         680         680
+ (sorted) pair # / total # of pairs =            0.318636239    
+ (sorted) pair #, event i, event j, rfactor_ij=        16000        1164        1508   6.99000025    
+ ntree, nbranch_i, nbranch_j =          926         682         682
+ (sorted) pair # / total # of pairs =            0.298721462    
+ (sorted) pair #, event i, event j, rfactor_ij=        15000         704         918   6.82000017    
+ ntree, nbranch_i, nbranch_j =          926         682         682
+ (sorted) pair # / total # of pairs =            0.278806716    
+ (sorted) pair #, event i, event j, rfactor_ij=        14000         135        1118   6.64000034    
+ ntree, nbranch_i, nbranch_j =          926         682         682
+ (sorted) pair # / total # of pairs =            0.258891940    
+ (sorted) pair #, event i, event j, rfactor_ij=        13000         853        1242   6.47999954    
+ ntree, nbranch_i, nbranch_j =          922         685         685
+ (sorted) pair # / total # of pairs =            0.238977179    
+ (sorted) pair #, event i, event j, rfactor_ij=        12000         185        1019   6.30000019    
+ ntree, nbranch_i, nbranch_j =          922         685         685
+ (sorted) pair # / total # of pairs =            0.219062418    
+ (sorted) pair #, event i, event j, rfactor_ij=        11000         908        1590   6.11999989    
+ ntree, nbranch_i, nbranch_j =          922         685         685
+ (sorted) pair # / total # of pairs =            0.199147642    
+ (sorted) pair #, event i, event j, rfactor_ij=        10000          40        1195   5.92000008    
+ ntree, nbranch_i, nbranch_j =          921         686         686
+ (sorted) pair # / total # of pairs =            0.179232880    
+ (sorted) pair #, event i, event j, rfactor_ij=         9000         717         974   5.72999954    
+ ntree, nbranch_i, nbranch_j =          917         689         689
+ (sorted) pair # / total # of pairs =            0.159318119    
+ (sorted) pair #, event i, event j, rfactor_ij=         8000         187         841   5.52000046    
+ ntree, nbranch_i, nbranch_j =          914         691         691
+ (sorted) pair # / total # of pairs =            0.139403358    
+ (sorted) pair #, event i, event j, rfactor_ij=         7000         890        1368   5.29999971    
+ ntree, nbranch_i, nbranch_j =          913         692         692
+ (sorted) pair # / total # of pairs =            0.119488589    
+ (sorted) pair #, event i, event j, rfactor_ij=         6000        1221        1249   5.03999996    
+ ntree, nbranch_i, nbranch_j =          912         693         693
+ (sorted) pair # / total # of pairs =             9.95738208E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         5000          40         134   4.78999996    
+ ntree, nbranch_i, nbranch_j =          912         693         693
+ (sorted) pair # / total # of pairs =             7.96590596E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         4000         716        1155   4.49000025    
+ ntree, nbranch_i, nbranch_j =          909         696           1
+ (sorted) pair # / total # of pairs =             5.97442947E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         3000         667        1157   4.11000013    
+ ntree, nbranch_i, nbranch_j =          904         701         701
+ (sorted) pair # / total # of pairs =             3.98295298E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         2000         715        1179   3.70000005    
+ ntree, nbranch_i, nbranch_j =          904         701         701
+ (sorted) pair # / total # of pairs =             1.99147649E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         1000         974        1258   3.06999993    
+ ntree, nbranch_i, nbranch_j =          898         706         706
+ Done.
+ End of bootstrap iteration:            8
+ elapsed seconds =   12.8948898    
+ --------------------------------------------------
+  
+  
+ Maximum quake number =         1616
+ best pair follows (resampled data)
+      386539       31312         698         996   60.6599884    
+ (sorted) pair # / total # of pairs =            0.995738268    
+ (sorted) pair #, event i, event j, rfactor_ij=        50000        1438        1456   29.2699966    
+ ntree, nbranch_i, nbranch_j =         1543          70          70
+ (sorted) pair # / total # of pairs =            0.975823462    
+ (sorted) pair #, event i, event j, rfactor_ij=        49000         369        1016   20.3799992    
+ ntree, nbranch_i, nbranch_j =         1420         196         196
+ (sorted) pair # / total # of pairs =            0.955908716    
+ (sorted) pair #, event i, event j, rfactor_ij=        48000         304        1218   17.7600002    
+ ntree, nbranch_i, nbranch_j =         1351         262         262
+ (sorted) pair # / total # of pairs =            0.935993969    
+ (sorted) pair #, event i, event j, rfactor_ij=        47000        1160        1186   16.2899971    
+ ntree, nbranch_i, nbranch_j =         1297           1         313
+ (sorted) pair # / total # of pairs =            0.916079164    
+ (sorted) pair #, event i, event j, rfactor_ij=        46000         779        1185   15.2799978    
+ ntree, nbranch_i, nbranch_j =         1244         365         365
+ (sorted) pair # / total # of pairs =            0.896164417    
+ (sorted) pair #, event i, event j, rfactor_ij=        45000         612         696   14.4600000    
+ ntree, nbranch_i, nbranch_j =         1196         414         414
+ (sorted) pair # / total # of pairs =            0.876249671    
+ (sorted) pair #, event i, event j, rfactor_ij=        44000         600         780   13.7900009    
+ ntree, nbranch_i, nbranch_j =         1160         451         451
+ (sorted) pair # / total # of pairs =            0.856334865    
+ (sorted) pair #, event i, event j, rfactor_ij=        43000         289        1321   13.2899971    
+ ntree, nbranch_i, nbranch_j =         1118         493           3
+ (sorted) pair # / total # of pairs =            0.836420119    
+ (sorted) pair #, event i, event j, rfactor_ij=        42000         780         781   12.8200016    
+ ntree, nbranch_i, nbranch_j =         1095         518         518
+ (sorted) pair # / total # of pairs =            0.816505373    
+ (sorted) pair #, event i, event j, rfactor_ij=        41000         129         968   12.3900003    
+ ntree, nbranch_i, nbranch_j =         1077         536         536
+ (sorted) pair # / total # of pairs =            0.796590567    
+ (sorted) pair #, event i, event j, rfactor_ij=        40000         646         800   12.0200005    
+ ntree, nbranch_i, nbranch_j =         1060         551         551
+ (sorted) pair # / total # of pairs =            0.776675820    
+ (sorted) pair #, event i, event j, rfactor_ij=        39000         138        1495   11.6899986    
+ ntree, nbranch_i, nbranch_j =         1049         563         563
+ (sorted) pair # / total # of pairs =            0.756761074    
+ (sorted) pair #, event i, event j, rfactor_ij=        38000         529        1237   11.3800001    
+ ntree, nbranch_i, nbranch_j =         1034         580         580
+ (sorted) pair # / total # of pairs =            0.736846268    
+ (sorted) pair #, event i, event j, rfactor_ij=        37000         207         813   11.0899992    
+ ntree, nbranch_i, nbranch_j =         1017         597         597
+ (sorted) pair # / total # of pairs =            0.716931522    
+ (sorted) pair #, event i, event j, rfactor_ij=        36000        1438        1489   10.8199978    
+ ntree, nbranch_i, nbranch_j =         1006         608         608
+ (sorted) pair # / total # of pairs =            0.697016776    
+ (sorted) pair #, event i, event j, rfactor_ij=        35000         882        1062   10.5500002    
+ ntree, nbranch_i, nbranch_j =         1000         614         614
+ (sorted) pair # / total # of pairs =            0.677102029    
+ (sorted) pair #, event i, event j, rfactor_ij=        34000          24         793   10.3000021    
+ ntree, nbranch_i, nbranch_j =          992         620         620
+ (sorted) pair # / total # of pairs =            0.657187223    
+ (sorted) pair #, event i, event j, rfactor_ij=        33000         236        1018   10.0699997    
+ ntree, nbranch_i, nbranch_j =          983         629         629
+ (sorted) pair # / total # of pairs =            0.637272477    
+ (sorted) pair #, event i, event j, rfactor_ij=        32000        1048        1237   9.85000038    
+ ntree, nbranch_i, nbranch_j =          977         635         635
+ (sorted) pair # / total # of pairs =            0.617357731    
+ (sorted) pair #, event i, event j, rfactor_ij=        31000        1062        1571   9.64000034    
+ ntree, nbranch_i, nbranch_j =          972         639         639
+ (sorted) pair # / total # of pairs =            0.597442925    
+ (sorted) pair #, event i, event j, rfactor_ij=        30000          61         715   9.44999981    
+ ntree, nbranch_i, nbranch_j =          970         640         640
+ (sorted) pair # / total # of pairs =            0.577528179    
+ (sorted) pair #, event i, event j, rfactor_ij=        29000         613         818   9.25000000    
+ ntree, nbranch_i, nbranch_j =          963         647         647
+ (sorted) pair # / total # of pairs =            0.557613432    
+ (sorted) pair #, event i, event j, rfactor_ij=        28000          23         698   9.05999851    
+ ntree, nbranch_i, nbranch_j =          955         655         655
+ (sorted) pair # / total # of pairs =            0.537698627    
+ (sorted) pair #, event i, event j, rfactor_ij=        27000         666        1018   8.88000011    
+ ntree, nbranch_i, nbranch_j =          952         658         658
+ (sorted) pair # / total # of pairs =            0.517783880    
+ (sorted) pair #, event i, event j, rfactor_ij=        26000        1256        1372   8.69000053    
+ ntree, nbranch_i, nbranch_j =          949         661         661
+ (sorted) pair # / total # of pairs =            0.497869134    
+ (sorted) pair #, event i, event j, rfactor_ij=        25000          42         779   8.51999950    
+ ntree, nbranch_i, nbranch_j =          944         666         666
+ (sorted) pair # / total # of pairs =            0.477954358    
+ (sorted) pair #, event i, event j, rfactor_ij=        24000         133         749   8.34999943    
+ ntree, nbranch_i, nbranch_j =          941         669         669
+ (sorted) pair # / total # of pairs =            0.458039582    
+ (sorted) pair #, event i, event j, rfactor_ij=        23000         892        1538   8.17999935    
+ ntree, nbranch_i, nbranch_j =          934         675         675
+ (sorted) pair # / total # of pairs =            0.438124835    
+ (sorted) pair #, event i, event j, rfactor_ij=        22000         529        1171   7.99999952    
+ ntree, nbranch_i, nbranch_j =          931         678         678
+ (sorted) pair # / total # of pairs =            0.418210059    
+ (sorted) pair #, event i, event j, rfactor_ij=        21000         525         580   7.82999945    
+ ntree, nbranch_i, nbranch_j =          930         678         678
+ (sorted) pair # / total # of pairs =            0.398295283    
+ (sorted) pair #, event i, event j, rfactor_ij=        20000         823         859   7.65999985    
+ ntree, nbranch_i, nbranch_j =          929         679         679
+ (sorted) pair # / total # of pairs =            0.378380537    
+ (sorted) pair #, event i, event j, rfactor_ij=        19000         278         885   7.50000000    
+ ntree, nbranch_i, nbranch_j =          926         682         682
+ (sorted) pair # / total # of pairs =            0.358465761    
+ (sorted) pair #, event i, event j, rfactor_ij=        18000         335         787   7.33000040    
+ ntree, nbranch_i, nbranch_j =          923         685         685
+ (sorted) pair # / total # of pairs =            0.338551015    
+ (sorted) pair #, event i, event j, rfactor_ij=        17000          43         858   7.16000080    
+ ntree, nbranch_i, nbranch_j =          918         690         690
+ (sorted) pair # / total # of pairs =            0.318636239    
+ (sorted) pair #, event i, event j, rfactor_ij=        16000        1002        1521   6.99000072    
+ ntree, nbranch_i, nbranch_j =          917         691         691
+ (sorted) pair # / total # of pairs =            0.298721462    
+ (sorted) pair #, event i, event j, rfactor_ij=        15000        1120        1169   6.82999992    
+ ntree, nbranch_i, nbranch_j =          917         691         691
+ (sorted) pair # / total # of pairs =            0.278806716    
+ (sorted) pair #, event i, event j, rfactor_ij=        14000         107         908   6.65000010    
+ ntree, nbranch_i, nbranch_j =          915         692         692
+ (sorted) pair # / total # of pairs =            0.258891940    
+ (sorted) pair #, event i, event j, rfactor_ij=        13000         207         840   6.47999954    
+ ntree, nbranch_i, nbranch_j =          914         693         693
+ (sorted) pair # / total # of pairs =            0.238977179    
+ (sorted) pair #, event i, event j, rfactor_ij=        12000         927        1055   6.29999971    
+ ntree, nbranch_i, nbranch_j =          913         694         694
+ (sorted) pair # / total # of pairs =            0.219062418    
+ (sorted) pair #, event i, event j, rfactor_ij=        11000        1199        1374   6.11000013    
+ ntree, nbranch_i, nbranch_j =          912         695         695
+ (sorted) pair # / total # of pairs =            0.199147642    
+ (sorted) pair #, event i, event j, rfactor_ij=        10000          82        1008   5.90000010    
+ ntree, nbranch_i, nbranch_j =          912         695         695
+ (sorted) pair # / total # of pairs =            0.179232880    
+ (sorted) pair #, event i, event j, rfactor_ij=         9000         793        1179   5.69999981    
+ ntree, nbranch_i, nbranch_j =          911         696         696
+ (sorted) pair # / total # of pairs =            0.159318119    
+ (sorted) pair #, event i, event j, rfactor_ij=         8000          97         880   5.49000025    
+ ntree, nbranch_i, nbranch_j =          911         696         696
+ (sorted) pair # / total # of pairs =            0.139403358    
+ (sorted) pair #, event i, event j, rfactor_ij=         7000         191         372   5.27000046    
+ ntree, nbranch_i, nbranch_j =          908           1         698
+ (sorted) pair # / total # of pairs =            0.119488589    
+ (sorted) pair #, event i, event j, rfactor_ij=         6000         569         704   5.02999973    
+ ntree, nbranch_i, nbranch_j =          906         700         700
+ (sorted) pair # / total # of pairs =             9.95738208E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         5000         274        1182   4.76999998    
+ ntree, nbranch_i, nbranch_j =          905         701         701
+ (sorted) pair # / total # of pairs =             7.96590596E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         4000         805        1133   4.47000027    
+ ntree, nbranch_i, nbranch_j =          902         706         706
+ (sorted) pair # / total # of pairs =             5.97442947E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         3000         569         918   4.11000013    
+ ntree, nbranch_i, nbranch_j =          900         708         708
+ (sorted) pair # / total # of pairs =             3.98295298E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         2000         237         667   3.71999979    
+ ntree, nbranch_i, nbranch_j =          897         711         711
+ (sorted) pair # / total # of pairs =             1.99147649E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         1000          47        1199   3.05999994    
+ ntree, nbranch_i, nbranch_j =          893         716         716
+ Done.
+ End of bootstrap iteration:            9
+ elapsed seconds =   10.2686844    
+ --------------------------------------------------
+  
+  
+ Maximum quake number =         1616
+ best pair follows (resampled data)
+      119877        9393         161         495   50.8400116    
+ (sorted) pair # / total # of pairs =            0.995738268    
+ (sorted) pair #, event i, event j, rfactor_ij=        50000         129        1008   29.1599979    
+ ntree, nbranch_i, nbranch_j =         1551          46          46
+ (sorted) pair # / total # of pairs =            0.975823462    
+ (sorted) pair #, event i, event j, rfactor_ij=        49000         495        1000   20.5000019    
+ ntree, nbranch_i, nbranch_j =         1431         185         185
+ (sorted) pair # / total # of pairs =            0.955908716    
+ (sorted) pair #, event i, event j, rfactor_ij=        48000          44         630   17.8400002    
+ ntree, nbranch_i, nbranch_j =         1350         260         260
+ (sorted) pair # / total # of pairs =            0.935993969    
+ (sorted) pair #, event i, event j, rfactor_ij=        47000         187         849   16.2900009    
+ ntree, nbranch_i, nbranch_j =         1289         322         322
+ (sorted) pair # / total # of pairs =            0.916079164    
+ (sorted) pair #, event i, event j, rfactor_ij=        46000         489         666   15.2199993    
+ ntree, nbranch_i, nbranch_j =         1234         379         379
+ (sorted) pair # / total # of pairs =            0.896164417    
+ (sorted) pair #, event i, event j, rfactor_ij=        45000        1549        1607   14.4500008    
+ ntree, nbranch_i, nbranch_j =         1196         416         416
+ (sorted) pair # / total # of pairs =            0.876249671    
+ (sorted) pair #, event i, event j, rfactor_ij=        44000        1218        1472   13.7700005    
+ ntree, nbranch_i, nbranch_j =         1164         445         445
+ (sorted) pair # / total # of pairs =            0.856334865    
+ (sorted) pair #, event i, event j, rfactor_ij=        43000         363        1197   13.2299995    
+ ntree, nbranch_i, nbranch_j =         1137         476         476
+ (sorted) pair # / total # of pairs =            0.836420119    
+ (sorted) pair #, event i, event j, rfactor_ij=        42000         411         968   12.7599993    
+ ntree, nbranch_i, nbranch_j =         1113         503         503
+ (sorted) pair # / total # of pairs =            0.816505373    
+ (sorted) pair #, event i, event j, rfactor_ij=        41000         236         920   12.3500004    
+ ntree, nbranch_i, nbranch_j =         1089         526         526
+ (sorted) pair # / total # of pairs =            0.796590567    
+ (sorted) pair #, event i, event j, rfactor_ij=        40000          47         841   11.9700022    
+ ntree, nbranch_i, nbranch_j =         1073         540         540
+ (sorted) pair # / total # of pairs =            0.776675820    
+ (sorted) pair #, event i, event j, rfactor_ij=        39000         265        1195   11.6300001    
+ ntree, nbranch_i, nbranch_j =         1056         559         559
+ (sorted) pair # / total # of pairs =            0.756761074    
+ (sorted) pair #, event i, event j, rfactor_ij=        38000        1171        1237   11.3199997    
+ ntree, nbranch_i, nbranch_j =         1042         572         572
+ (sorted) pair # / total # of pairs =            0.736846268    
+ (sorted) pair #, event i, event j, rfactor_ij=        37000         779         823   11.0300007    
+ ntree, nbranch_i, nbranch_j =         1031         584         584
+ (sorted) pair # / total # of pairs =            0.716931522    
+ (sorted) pair #, event i, event j, rfactor_ij=        36000          82        1122   10.7700005    
+ ntree, nbranch_i, nbranch_j =         1019         596         596
+ (sorted) pair # / total # of pairs =            0.697016776    
+ (sorted) pair #, event i, event j, rfactor_ij=        35000         689         890   10.5200014    
+ ntree, nbranch_i, nbranch_j =         1011           1         604
+ (sorted) pair # / total # of pairs =            0.677102029    
+ (sorted) pair #, event i, event j, rfactor_ij=        34000          35         295   10.2700014    
+ ntree, nbranch_i, nbranch_j =         1002         613         613
+ (sorted) pair # / total # of pairs =            0.657187223    
+ (sorted) pair #, event i, event j, rfactor_ij=        33000         134         783   10.0599985    
+ ntree, nbranch_i, nbranch_j =          991         623         623
+ (sorted) pair # / total # of pairs =            0.637272477    
+ (sorted) pair #, event i, event j, rfactor_ij=        32000         841        1472   9.84000015    
+ ntree, nbranch_i, nbranch_j =          984         630         630
+ (sorted) pair # / total # of pairs =            0.617357731    
+ (sorted) pair #, event i, event j, rfactor_ij=        31000         338         629   9.64000034    
+ ntree, nbranch_i, nbranch_j =          974         639         639
+ (sorted) pair # / total # of pairs =            0.597442925    
+ (sorted) pair #, event i, event j, rfactor_ij=        30000         410        1097   9.43000031    
+ ntree, nbranch_i, nbranch_j =          972         641         641
+ (sorted) pair # / total # of pairs =            0.577528179    
+ (sorted) pair #, event i, event j, rfactor_ij=        29000          86        1607   9.23000050    
+ ntree, nbranch_i, nbranch_j =          963         650         650
+ (sorted) pair # / total # of pairs =            0.557613432    
+ (sorted) pair #, event i, event j, rfactor_ij=        28000         323        1062   9.03999996    
+ ntree, nbranch_i, nbranch_j =          959         654         654
+ (sorted) pair # / total # of pairs =            0.537698627    
+ (sorted) pair #, event i, event j, rfactor_ij=        27000        1539        1610   8.85999966    
+ ntree, nbranch_i, nbranch_j =          957         656         656
+ (sorted) pair # / total # of pairs =            0.517783880    
+ (sorted) pair #, event i, event j, rfactor_ij=        26000         280        1185   8.68999958    
+ ntree, nbranch_i, nbranch_j =          954         661         661
+ (sorted) pair # / total # of pairs =            0.497869134    
+ (sorted) pair #, event i, event j, rfactor_ij=        25000         314         626   8.51000023    
+ ntree, nbranch_i, nbranch_j =          951         664         664
+ (sorted) pair # / total # of pairs =            0.477954358    
+ (sorted) pair #, event i, event j, rfactor_ij=        24000          61        1097   8.34999943    
+ ntree, nbranch_i, nbranch_j =          945         669         669
+ (sorted) pair # / total # of pairs =            0.458039582    
+ (sorted) pair #, event i, event j, rfactor_ij=        23000         532        1423   8.18000031    
+ ntree, nbranch_i, nbranch_j =          942         672         672
+ (sorted) pair # / total # of pairs =            0.438124835    
+ (sorted) pair #, event i, event j, rfactor_ij=        22000         793         858   8.02000046    
+ ntree, nbranch_i, nbranch_j =          941         673         673
+ (sorted) pair # / total # of pairs =            0.418210059    
+ (sorted) pair #, event i, event j, rfactor_ij=        21000         777         868   7.85999966    
+ ntree, nbranch_i, nbranch_j =          939         675         675
+ (sorted) pair # / total # of pairs =            0.398295283    
+ (sorted) pair #, event i, event j, rfactor_ij=        20000         692        1029   7.68999958    
+ ntree, nbranch_i, nbranch_j =          936         678         678
+ (sorted) pair # / total # of pairs =            0.378380537    
+ (sorted) pair #, event i, event j, rfactor_ij=        19000         239        1211   7.51999998    
+ ntree, nbranch_i, nbranch_j =          933         681         681
+ (sorted) pair # / total # of pairs =            0.358465761    
+ (sorted) pair #, event i, event j, rfactor_ij=        18000        1369        1488   7.34999943    
+ ntree, nbranch_i, nbranch_j =          928         685           3
+ (sorted) pair # / total # of pairs =            0.338551015    
+ (sorted) pair #, event i, event j, rfactor_ij=        17000        1396        1502   7.17999935    
+ ntree, nbranch_i, nbranch_j =          924         689           3
+ (sorted) pair # / total # of pairs =            0.318636239    
+ (sorted) pair #, event i, event j, rfactor_ij=        16000         771        1112   7.00000000    
+ ntree, nbranch_i, nbranch_j =          921         691         691
+ (sorted) pair # / total # of pairs =            0.298721462    
+ (sorted) pair #, event i, event j, rfactor_ij=        15000         865        1480   6.82000017    
+ ntree, nbranch_i, nbranch_j =          919         693         693
+ (sorted) pair # / total # of pairs =            0.278806716    
+ (sorted) pair #, event i, event j, rfactor_ij=        14000         191        1168   6.64999962    
+ ntree, nbranch_i, nbranch_j =          918           1         694
+ (sorted) pair # / total # of pairs =            0.258891940    
+ (sorted) pair #, event i, event j, rfactor_ij=        13000         500        1043   6.47000027    
+ ntree, nbranch_i, nbranch_j =          917           1         695
+ (sorted) pair # / total # of pairs =            0.238977179    
+ (sorted) pair #, event i, event j, rfactor_ij=        12000         465        1052   6.29000092    
+ ntree, nbranch_i, nbranch_j =          915         697         697
+ (sorted) pair # / total # of pairs =            0.219062418    
+ (sorted) pair #, event i, event j, rfactor_ij=        11000         592         701   6.09999990    
+ ntree, nbranch_i, nbranch_j =          913         699         699
+ (sorted) pair # / total # of pairs =            0.199147642    
+ (sorted) pair #, event i, event j, rfactor_ij=        10000         954         963   5.90000010    
+ ntree, nbranch_i, nbranch_j =          908         701         701
+ (sorted) pair # / total # of pairs =            0.179232880    
+ (sorted) pair #, event i, event j, rfactor_ij=         9000          98         138   5.69000006    
+ ntree, nbranch_i, nbranch_j =          905         703         703
+ (sorted) pair # / total # of pairs =            0.159318119    
+ (sorted) pair #, event i, event j, rfactor_ij=         8000         499        1004   5.48000002    
+ ntree, nbranch_i, nbranch_j =          903         704         704
+ (sorted) pair # / total # of pairs =            0.139403358    
+ (sorted) pair #, event i, event j, rfactor_ij=         7000        1384        1444   5.26000023    
+ ntree, nbranch_i, nbranch_j =          903         704         704
+ (sorted) pair # / total # of pairs =            0.119488589    
+ (sorted) pair #, event i, event j, rfactor_ij=         6000         886        1371   5.02000046    
+ ntree, nbranch_i, nbranch_j =          901         706         706
+ (sorted) pair # / total # of pairs =             9.95738208E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         5000         740        1256   4.78000021    
+ ntree, nbranch_i, nbranch_j =          900         710         710
+ (sorted) pair # / total # of pairs =             7.96590596E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         4000         128         377   4.49000025    
+ ntree, nbranch_i, nbranch_j =          898         712         712
+ (sorted) pair # / total # of pairs =             5.97442947E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         3000         179         880   4.13000011    
+ ntree, nbranch_i, nbranch_j =          896         714         714
+ (sorted) pair # / total # of pairs =             3.98295298E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         2000          35         865   3.70000005    
+ ntree, nbranch_i, nbranch_j =          895         715         715
+ (sorted) pair # / total # of pairs =             1.99147649E-02
+ (sorted) pair #, event i, event j, rfactor_ij=         1000         732         960   3.07999992    
+ ntree, nbranch_i, nbranch_j =          891         719         719
+ Done.
+ End of bootstrap iteration:           10
+ elapsed seconds =   12.4901352    
+ --------------------------------------------------
+  
+  
